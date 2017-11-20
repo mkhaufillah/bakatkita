@@ -1,0 +1,32 @@
+/*sterilisasi row*/
+.no-gutters {
+  margin: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding: 0;
+  }
+}
+
+/*standar margin bakatkita*/
+.margin-private {
+  padding: 18px;
+}
+
+/*semua p diatur rata kanan kiri*/
+p {
+  text-align: justify;
+}
+
+/*object pindah kanan ex: tombol selanjutnya*/
+.right {
+  float: right;
+  display: block;
+  margin-bottom: 18px;
+}
+
+/*garis atas bawah ex: footer*/
+.border-bottom-up-private {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
