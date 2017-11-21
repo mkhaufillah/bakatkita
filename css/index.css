@@ -15,6 +15,7 @@
 
 /*semua p diatur rata kanan kiri*/
 p {
+  font-family: 'Lato', sans-serif;
   text-align: justify;
 }
 
@@ -31,10 +32,6 @@ p {
   border-bottom: 1px solid black;
 }
 
-h1 h2 h3 h4 h5 h6{
+h1, h2, h3, h4, h5, h6{
   font-family: 'Varela Round', sans-serif;
-}
-
-p{
-  font-family: 'Lato', sans-serif;
 }
