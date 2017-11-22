@@ -1,11 +1,13 @@
-/*sterilisasi row*/
-.no-gutters {
+/*fluid container*/
+.container {
+  width: 90%;
+  max-width:initial;
+}
+.container > .row {
   margin: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding: 0;
-  }
+}
+.container > .row > .col {
+  padding: 0;
 }
 
 /*standar margin bakatkita*/
