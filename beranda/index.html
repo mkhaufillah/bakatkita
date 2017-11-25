@@ -30,6 +30,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/jQuery-optim.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -41,32 +42,58 @@
         <li><a href="#">Beranda</a></li>
         <li><a href="#">Komunitas</a></li>
         <li><a href="#">Progress</a></li>
-        <li><a href="#">Mobile</a></li>
+        <li><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
+        <li><a class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="#">Beranda</a></li>
         <li><a href="#">Komunitas</a></li>
         <li><a href="#">Progress</a></li>
-        <li><a href="#">Mobile</a></li>
+        <li><a href="#">Notifikasi<span class="new badge right" data-badge-caption="baru">2</span></a></li>
+        <li>
+        </li>
       </ul>
-    </div>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a class="modal-trigger right hide-on-large-only" href="#modal1"><i class="material-icons">search</i></a>
   </div>
   </nav>
+</div>
+
+<!-- modal for search bar -->
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <nav>
+  <div class="nav-wrapper accent-color">
+    <form>
+      <div class="input-field">
+        <input id="search" type="search">
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i type="reset" class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+  </div>
+</div>
+
   <!-- content -->
     <div class="row container">
+      <!-- left row -->
       <div class="hide-on-med-and-down">
         <div class="col s12 m4 l3">
           <div class="row">
-            <div class="col s4">
-              <p><img src="../assets/man.png" alt="profile" style="width:100%"></p>
-            </div>
-            <div class="col s8">
-              <p>
-                Nama  : Lorem Ipsum<br>
-                Bakat : Lorem<br>
-                Status: Lorem
-              </p>
+            <div class="col">
+              <div class="card horizontal">
+                <div class="card-image valign-wrapper">
+                  <img src="../assets/man.png">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h5 class="header">Paijo Stuart</h5>
+                    <p>Bergabung sejak Desember 2017</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -77,107 +104,204 @@
               <a href="#!" class="btn waves-effect waves-orange">Logout</a>
             </div>
           </div>
+          <div class="row">
+            <h5 class="header">Komunitas</h5>
+            <div class="collection">
+              <a href="#!" class="collection-item">Desura Music Club</a>
+              <a href="#!" class="collection-item">Pretzelicious</a>
+            </div>
+          </div>
+          <div class="row">
+            <h5 class="header">Coach</h5>
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header">Desura Music Club</div>
+                <div class="collapsible-body">
+                  <div class="card horizontal">
+                    <div class="card-image valign-wrapper">
+                      <img src="../assets/man.png">
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                        <h5 class="header">Juki</h5>
+                        <p>DesuraMC Coach - Rock Specialist</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Pretzelicious</div>
+                <div class="collapsible-body">
+                  <div class="card horizontal">
+                    <div class="card-image valign-wrapper">
+                      <img src="../assets/man.png">
+                    </div>
+                    <div class="card-stacked">
+                      <div class="card-content">
+                        <h5 class="header">Chef Bronx Hexa</h5>
+                        <p>Pretzelicious Chief Coach</p>
+                      </div>
+                    </div>
+                  </div></div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!-- center -->
         <div class="col s12 m12 l6">
-          <h5>Rekomendasi untuk Anda</h5>
+          <h5 class="header">Rekomendasi Komunitas</h5>
             <div class="row">
               <div class="col s12 m6 l6">
                 <div class="card small hoverable">
                   <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title customcardtitile">Card Title</span>
+                    <img src="../assets/gonedrock.jpg">
+                    <span class="card-title customcardtitile">Gone D-rock</span>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
+                    <p>Gone D-rock will improve your guitar skills, rock-specialized. Join us and get a chance to collaborate with Metallica!</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Gabung Sekarang!</a>
                   </div>
                 </div>
               </div>
               <div class="col s12 m6 l6">
                 <div class="card small hoverable">
                   <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title dark-primary-color">Card Title</span>
+                    <img src="../assets/mushroomiac.jpg">
+                    <span class="card-title">Mushroomiac!</span>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
+                    <p>Have a lot of mushrooms but don't know how to cook 'em? Join us to get super-recipes from Mushroomiac Master!</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Gabung Sekarang!</a>
                   </div>
                 </div>
               </div>
               <div class="col s12 m6 l6">
                 <div class="card small hoverable">
                   <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img src="../assets/foxigami.jpg">
+                    <span class="card-title">FoxiGami</span>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
+                    <p>We made paper alive!</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Bergabung Sekarang!</a>
                   </div>
                 </div>
               </div>
               <div class="col s12 m6 l6">
                 <div class="card small hoverable">
                   <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img src="../assets/orcha.jpg">
+                    <span class="card-title">Orcha Orchestra</span>
                   </div>
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
+                    <p>You'll never play music alone anymore.</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Bergabung Sekarang!</a>
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l6">
-                <div class="card small hoverable">
-                  <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title">Card Title</span>
-                  </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l6">
-                <div class="card small hoverable">
-                  <div class="card-image">
-                    <img src="../assets/guitar.jpg">
-                    <span class="card-title">Card Title</span>
-                  </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">This is a link</a>
-                  </div>
-                </div>
+            <div class="row">
+              <div class="col s12">
+                <center><a href="#!" class="btn waves-effect waves-orange">Lihat Semua</a></center>
               </div>
             </div>
           </div>
+        </div>
+      <!-- right sidebar -->
       <div class="hide-on-med-and-down">
         <div class="col s12 m4 l3">
-
+          <div class="row">
+          <h5 class="header">Kategori Populer</h5>
+          <ul class="collection">
+           <li class="collection-item avatar">
+             <img src="../assets/guitar_96px.png" alt="" class="circle">
+             <span class="title">Musik</span>
+             <p>Instrumen Gitar
+             </p>
+           </li>
+           <li class="collection-item avatar">
+             <img src="../assets/piano_96px.png" alt="" class="circle">
+             <span class="title">Musik</span>
+             <p>Instrumen Piano
+             </p>
+           </li>
+           <li class="collection-item avatar">
+             <img src="../assets/soccer_96px.png" alt="" class="circle">
+             <span class="title">Olah Raga</span>
+             <p>Sepak Bola
+             </p>
+           </li>
+           <li class="collection-item avatar">
+             <img src="../assets/clapperboard_96px.png" alt="" class="circle">
+             <span class="title">Sinematografi</span>
+             <p>Film Pendek
+             </p>
+           </li>
+           <li class="collection-item avatar">
+             <img src="../assets/badminton_96px.png" alt="" class="circle">
+             <span class="title">Olah Raga</span>
+             <p>Bulu Tangkis
+             </p>
+           </li>
+         </ul>
+       </div>
+       <div class="row">
+         <h5 class="header">Semua Kategori</h5>
+         <ul class="collapsible" data-collapsible="accordion">
+           <li>
+             <div class="collapsible-header"><i class="material-icons">directions_bike</i>Olah Raga</div>
+             <div class="collapsible-body">
+               <ul class="collection">
+                <a class="collection-item" href="#">Sepak Bola</a>
+                <a class="collection-item" href="#">Basket</a>
+                <a class="collection-item" href="#">Badminton</a>
+                <a class="collection-item" href="#">Atletik</a>
+              </ul>
+             </div>
+           </li>
+           <li>
+             <div class="collapsible-header"><i class="material-icons">videogame_asset</i>Games</div>
+             <div class="collapsible-body">
+               <ul class="collection">
+                <a class="collection-item" href="#">CS:GO e-Sports</a>
+                <a class="collection-item" href="#">Arena of Valor e-Sports</a>
+                <a class="collection-item" href="#">DoTA 2 e-Sports</a>
+                <a class="collection-item" href="#">Point Blank e-Sports</a>
+              </ul>
+             </div>
+           </li>
+           <li>
+             <div class="collapsible-header"><i class="material-icons">music_note</i>Musik</div>
+             <div class="collapsible-body">
+               <ul class="collection">
+                 <a class="collection-item" href="#">Instrumen Gitar</a>
+                 <a class="collection-item" href="#">Instrumen Piano</a>
+                 <a class="collection-item" href="#">Instrumen Perkusi</a>
+                 <a class="collection-item" href="#">Instrumen Etnik</a>
+              </ul>
+            </div>
+           </li>
+           <li>
+             <div class="collapsible-header"><i class="material-icons">local_movies</i>Seni</div>
+             <div class="collapsible-body">
+               <ul class="collection">
+                 <a class="collection-item" href="#">Sinematografi</a>
+                 <a class="collection-item" href="#">Drama</a>
+                 <a class="collection-item" href="#">Seni tari</a>
+              </ul>
+           </li>
+         </ul>
+       </div>
         </div>
       </div>
-    </div>
+  </div>
   </body>
