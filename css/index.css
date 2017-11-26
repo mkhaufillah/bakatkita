@@ -1,39 +1,162 @@
-/*fluid container*/
+* {
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html, body, .block {
+  height: 100%;
+}
+
+section {
+  padding-bottom: 8vh;
+  padding-top: 8vh;
+}
+
+/* fluid container */
 .container {
   width: 90%;
   max-width:initial;
 }
+
 .container > .row {
   margin: 0;
 }
+
 .container > .row > .col {
   padding: 0;
 }
 
-/*standar margin bakatkita*/
+.no-margin-padding {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* standar margin bakatkita */
 .margin-private {
-  padding: 18px;
+  margin: 2vh;
 }
 
-/*semua p diatur rata kanan kiri*/
-p {
-  font-family: 'Lato', sans-serif;
+/* text */
+.justify-text {
   text-align: justify;
+  white-space: normal;
 }
 
-/*object pindah kanan ex: tombol selanjutnya*/
-.right {
-  float: right;
+.vert-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.header-fixed {
+  position: fixed;
+  z-index:997;
+  height:56px;
+  width: 100%;
+}
+
+/* scroll */
+.scrolling-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
   display: block;
-  margin-bottom: 18px;
+  white-space: nowrap;
+  cursor: grab;
+  cursor : -o-grab;
+  cursor : -moz-grab;
+  cursor : -webkit-grab;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 
-/*garis atas bawah ex: footer*/
-.border-bottom-up-private {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+.scrolling-wrapper .card {
+    margin: 2vh;
+    width: 40vh;
+    display:inline-block;
+    *display:inline;/* For IE7*/
+    *zoom:1;/* For IE7*/
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    vertical-align: top;
+ }
+
+.card span {
+  display: block;
+  width: 100%;
+  padding-bottom: 3vh;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Varela Round', sans-serif;
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  vertical-align: top;
+}
+
+.scrolling-wrapper-flexbox .card {
+  flex: 0 0 auto;
+}
+
+.header {
+  background: url('../assets/img/background1.jpg') no-repeat fixed center;
+}
+
+.category {
+  background: url('../assets/img/background2.jpg') no-repeat fixed center;
+}
+
+@media screen and (min-width:600px) {
+  .login-right {
+    border-left: 1px solid #bdbdbd;
+  }
+}
+
+/* modifikasi input forms */
+/* label color */
+.input-field label {
+  color: #000 !important;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: #0288d1 !important;
+}
+
+/* label underline focus color */
+.input-field input:focus {
+  border-bottom: 1px solid #0288d1 !important;
+  box-shadow: 0 1px 0 0 #0288d1 !important;
+}
+
+/* valid color */
+.input-field input.valid {
+  border-bottom: 1px solid #4caf50 !important;
+  box-shadow: 0 1px 0 0 #4caf50 !important;
+}
+
+/* invalid color */
+.input-field input.invalid {
+  border-bottom: 1px solid #f44336 !important;
+  box-shadow: 0 1px 0 0 #f44336 !important;
+}
+
+/* custom modal size */
+#daftar {
+  width: 40% !important;
+  height: auto !important;
+  padding-top: 3vh !important;
 }

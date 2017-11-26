@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="SSD TEAM - DDAP" />
+  	<meta name="description" content="bakatkita corps" />
+  	<meta name="keywords"  content="bakat,talent" />
     <!--Mobile Optimized-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- URL Theme Color untuk Chrome, Firefox OS, Opera dan Vivaldi -->
-    <meta name="theme-color" content="#1976d2" />
+    <meta name="theme-color" content="#0288D1" />
     <!-- URL Theme Color untuk Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#1976d2" />
+    <meta name="msapplication-navbutton-color" content="#0288D1" />
     <!-- URL Theme Color untuk iOS Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1976d2" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0288D1" />
 
     <title>bakatkita</title>
 
@@ -18,170 +23,370 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <!-- palette -->
     <link rel="stylesheet" href="css/palette.css">
+    <!-- animasi -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- private css -->
     <link rel="stylesheet" href="css/index.css">
 
-    <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Import lib-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <!-- dragging page -->
+    <script src="js/drag.js"></script>
+    <!-- private js -->
     <script src="js/index.js"></script>
   </head>
   <body>
     <!-- header section -->
-    <!-- navbar -->
-    <div class="navbar-fixed">
+    <div class="header-fixed">
       <nav>
-        <div class="nav-wrapper dark-primary-color">
+        <div class="nav-wrapper">
           <div class="container">
             <a href="#" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#">Gabung komunitas</a></li>
-              <li class="default-primary-color"><a href="#">Daftar</a></li>
-              <li class="accent-color"><a href="#">Masuk</a></li>
+              <li><a class="waves-effect waves-light" href="#">Lihat komunitas</a></li>
+              <li><a class="waves-effect waves-light modal-trigger" href="#daftar">Daftar</a></li>
+              <li><a class="waves-effect waves-light modal-trigger" href="#masuk">Masuk</a></li>
             </ul>
           </div>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
       </nav>
     </div>
-
-    <!-- header -->
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    <div class="block header">
+      <section class="vert-center">
+        <div class="container">
+          <div class="row">
+            <h3 class="col s12 grey-text text-lighten-5 anim-show center hide-on-small-only">Kembangkan bakatmu sekarang juga!!</h3>
+            <a class="waves-effect
+                      waves-light
+                      btn-large
+                      light-blue darken-2
+                      margin-private
+                      col s12 m5 offset-m1 l3 offset-l3">Saya pencari bakat</a>
+            <a class="waves-effect
+                      waves-light
+                      btn-large
+                      deep-orange
+                      margin-private
+                      col s12 m5 l3">Saya punya bakat</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- content -->
+    <section class="category">
+      <div class="container">
+        <div class="row">
+          <h4 class="col s12 grey-text text-lighten-5">Kategori</h4>
+          <div class="col s12">
+            <div class="scrolling-wrapper scrolling-wrapper-flexbox dragscroll" id="category">
+              <!-- content dari db -->
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item red white-text" href="#one!">
-        <h2>First Panel</h2>
-        <p class="white-text">This is your first panel</p>
-      </div>
-      <div class="carousel-item amber white-text" href="#two!">
-        <h2>Second Panel</h2>
-        <p class="white-text">This is your second panel</p>
-      </div>
-      <div class="carousel-item green white-text" href="#three!">
-        <h2>Third Panel</h2>
-        <p class="white-text">This is your third panel</p>
-      </div>
-      <div class="carousel-item blue white-text" href="#four!">
-        <h2>Fourth Panel</h2>
-        <p class="white-text">This is your fourth panel</p>
+    </section>
+    <section class="light-blue darken-2">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 center" id="quote">
+              <!-- content dari db -->
+            </div>
+          </div>
+        </div>
+    </section>
+    <div id="fitur" class="carousel carousel-slider center" data-indicators="true"></div>
+    <footer class="page-footer light-blue darken-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12 hide-on-med-and-down">
+                <h5 class="white-text">bakatkita</h5>
+                <p class="grey-text text-lighten-4">Kembangkan bakatmu raih prestasimu</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Menu</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Bantuan</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Umpan balik</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Lisensi</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright bakatkita
+            <a class="grey-text text-lighten-4 right" href="#!">Tentang kami</a>
+            </div>
+          </div>
+        </footer>
+    <!-- slide menu mobile -->
+    <ul id="slide-out" class="side-nav">
+      <li><a class="subheader">Komunitas</a></li>
+      <li><a class="waves-effect" href="#">Lihat komunitas</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Authentikasi</a></li>
+      <li><a class="waves-effect modal-trigger" href="#daftar">Daftar</a></li>
+      <li><a class="waves-effect modal-trigger" href="#masuk">Masuk</a></li>
+    </ul>
+    <!-- popup modal -->
+    <div id="masuk" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <form id="form-login" class="col s12 m8" novalidate="novalidate">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" class="validate" name="email" type="email" required="true" aria-required="true">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" class="validate" name="password" type="password" required="true" aria-required="true">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button id="login" class="col s12 waves-effect waves-light btn light-blue darken-2" type="submit" name="action">Login</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <a href="#" class="right">Lupa password?</a>
+              </div>
+            </div>
+          </form>
+          <div class="col s12 m4 login-right">
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-dark btn grey lighten-5 grey-text text-darken-4">Google</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn blue darken-2">Facebook</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn light-blue">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- content section -->
-    <div class="row no-gutters">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <!-- menu -->
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="margin-private">
-              <h2>Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button class="btn right">Selanjutnya</button>
-            </div>
+    <div id="daftar" class="modal">
+      <div class="modal-content no-margin-padding">
+        <div class="row">
+          <div class="col s12 m6">
+            <center>
+              <a href="#daftar-lanjut-agent" class="waves-effect waves-light modal-trigger"><img src="assets/img/agent.svg" alt="pelatih" width="100%"></a>
+              <h5>Pelatih</h5>
+            </center>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <div class="margin-private">
-              <h2>Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button class="btn right">Selanjutnya</button>
-            </div>
+          <div class="col s12 m6">
+            <center>
+              <a href="#daftar-lanjut-boy" class="waves-effect waves-light modal-trigger"><img src="assets/img/boy.svg" alt="pelatih" width="100%"></a>
+              <h5>Pebakat</h5>
+            </center>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-4">
-            <div class="margin-private">
-              <h2>Lorem ipsum</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <button class="btn right">Selanjutnya</button>
+        </div>
+      </div>
+    </div>
+    <div id="daftar-lanjut-agent" class="modal daftar-child">
+      <div class="modal-content">
+        <div class="row">
+          <form id="form-daftar-agent" class="col s12 m8" novalidate="novalidate">
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input id="fname" class="validate" name="fname" type="text" required="true" aria-required="true">
+                <label for="fname">Nama depan</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input id="lname" class="validate" name="lname" type="text" required="true" aria-required="true">
+                <label for="lname">Nama belakang</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="date-birth" class="validate datepicker" name="date-birth" type="date" required="true" aria-required="true">
+                <label for="date-birth">Tanggal lahir</label>
+              </div>
+            </div>
+            <div class="input-field col s12">
+              <select id="bakat" name="bakat" required="true" aria-required="true">
+                <option value="" disabled selected>Pilihan kamu</option>
+                <optgroup label="Olahraga">
+                  <option value="sepak-bola" data-icon="assets/img/agent.svg" class="circle">Sepak bola</option>
+                  <option value="futsal" data-icon="assets/img/agent.svg" class="circle">Futsal</option>
+                  <option value="volly" data-icon="assets/img/agent.svg" class="circle">Volly</option>
+                  <option value="basket" data-icon="assets/img/agent.svg" class="circle">Basket</option>
+                  <option value="badminton" data-icon="assets/img/agent.svg" class="circle">Badminton</option>
+                  <option value="beladiri" data-icon="assets/img/agent.svg" class="circle">Beladiri</option>
+                  <option value="takraw" data-icon="assets/img/agent.svg" class="circle">Takraw</option>
+                </optgroup>
+                <optgroup label="Musik">
+                  <option value="gitar" data-icon="assets/img/agent.svg" class="circle">Gitar</option>
+                  <option value="piano" data-icon="assets/img/agent.svg" class="circle">Piano</option>
+                  <option value="terompet" data-icon="assets/img/agent.svg" class="circle">Terompet</option>
+                  <option value="gendang"  data-icon="assets/img/agent.svg" class="circle">Gendang</option>
+                  <option value="drum"  data-icon="assets/img/agent.svg" class="circle">Drum</option>
+                  <option value="biola" data-icon="assets/img/agent.svg" class="circle">Biola</option>
+                </optgroup>
+                <optgroup label="Game">
+                  <option value="moba" data-icon="assets/img/agent.svg" class="circle">Moba</option>
+                  <option value="fps" data-icon="assets/img/agent.svg" class="circle">FPS</option>
+                  <option value="arcade" data-icon="assets/img/agent.svg" class="circle">Arcade</option>
+                </optgroup>
+              </select>
+              <label>Pilih bakat</label>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" class="validate" name="email" type="email" required="true" aria-required="true">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" class="validate" name="password" type="password" required="true" aria-required="true">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="uPassword" class="validate" name="uPassword" type="password" required="true" aria-required="true">
+                <label for="uPassword">Ulangi password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button id="dPelatih" class="col s12 waves-effect waves-light btn light-blue darken-2" type="submit" name="action">Daftar pelatih</button>
+              </div>
+            </div>
+          </form>
+          <div class="col s12 m4 login-right">
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-dark btn grey lighten-5 grey-text text-darken-4">Google</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn blue darken-2">Facebook</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn light-blue">Twitter</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- new sub section of content -->
-    <div class="row no-gutters bg-dark text-light">
-      <div class="container-fluid">
-        <center class="col">
-          <h2 class="margin-private">Lorem Ipsum</h2>
-          <p class="margin-private">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </center>
+    <div id="daftar-lanjut-boy" class="modal daftar-child">
+      <div class="modal-content">
+        <div class="row">
+          <form id="form-daftar-boy" class="col s12 m8" novalidate="novalidate">
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input id="fname" class="validate" name="fname" type="text" required="true" aria-required="true">
+                <label for="fname">Nama depan</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input id="lname" class="validate" name="lname" type="text" required="true" aria-required="true">
+                <label for="lname">Nama belakang</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="date-birth" class="validate datepicker" name="date-birth" type="date" required="true" aria-required="true">
+                <label for="date-birth">Tanggal lahir</label>
+              </div>
+            </div>
+            <div class="input-field col s12">
+              <select id="bakat" name="bakat" required="true" aria-required="true">
+                <option value="" disabled selected>Pilihan kamu</option>
+                <optgroup label="Olahraga">
+                  <option value="sepak-bola" data-icon="assets/img/boy.svg" class="circle">Sepak bola</option>
+                  <option value="futsal" data-icon="assets/img/boy.svg" class="circle">Futsal</option>
+                  <option value="volly" data-icon="assets/img/boy.svg" class="circle">Volly</option>
+                  <option value="basket" data-icon="assets/img/boy.svg" class="circle">Basket</option>
+                  <option value="badminton" data-icon="assets/img/boy.svg" class="circle">Badminton</option>
+                  <option value="beladiri" data-icon="assets/img/boy.svg" class="circle">Beladiri</option>
+                  <option value="takraw" data-icon="assets/img/boy.svg" class="circle">Takraw</option>
+                </optgroup>
+                <optgroup label="Musik">
+                  <option value="gitar" data-icon="assets/img/boy.svg" class="circle">Gitar</option>
+                  <option value="piano" data-icon="assets/img/boy.svg" class="circle">Piano</option>
+                  <option value="terompet" data-icon="assets/img/boy.svg" class="circle">Terompet</option>
+                  <option value="gendang"  data-icon="assets/img/boy.svg" class="circle">Gendang</option>
+                  <option value="drum"  data-icon="assets/img/boy.svg" class="circle">Drum</option>
+                  <option value="biola" data-icon="assets/img/boy.svg" class="circle">Biola</option>
+                </optgroup>
+                <optgroup label="Game">
+                  <option value="moba" data-icon="assets/img/boy.svg" class="circle">Moba</option>
+                  <option value="fps" data-icon="assets/img/boy.svg" class="circle">FPS</option>
+                  <option value="arcade" data-icon="assets/img/boy.svg" class="circle">Arcade</option>
+                </optgroup>
+              </select>
+              <label>Pilih bakat</label>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" class="validate" name="email" type="email" required="true" aria-required="true">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" class="validate" name="password" type="password" required="true" aria-required="true">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="uPassword" class="validate" name="uPassword" type="password" required="true" aria-required="true">
+                <label for="uPassword">Ulangi password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button id="dPebakat" class="col s12 waves-effect waves-light btn light-blue darken-2" type="submit" name="action">Daftar pebakat</button>
+              </div>
+            </div>
+          </form>
+          <div class="col s12 m4 login-right">
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-dark btn grey lighten-5 grey-text text-darken-4">Google</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn blue darken-2">Facebook</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <a class="col s12 waves-effect waves-light btn light-blue">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- footer section -->
-    <!-- bagian sosmed footer-->
-    <footer class="row no-gutters">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="col-sm-1 col-md-2 col-lg-3"></div>
-          <div class="col-sm-10 col-md-8 col-lg-6">
-            <div class="row no-gutters">
-              <div class="col-6 col-md-3">
-                <center class="margin-private"><span>sosmed</span></center>
-              </div>
-              <div class="col-6 col-md-3">
-                <center class="margin-private"><span>sosmed</span></center>
-              </div>
-              <div class="col-6 col-md-3">
-                <center class="margin-private"><span>sosmed</span></center>
-              </div>
-              <div class="col-6 col-md-3">
-                <center class="margin-private"><span>sosmed</span></center>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-1 col-md-2 col-lg-3"></div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- bagian menu footer-->
-    <footer class="row no-gutters">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="col-md-1 col-lg-2"></div>
-          <div class="col-md-10 col-lg-8 border-bottom-up-private">
-            <div class="row no-gutters">
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-              <div class="col-sm-2">
-                <center class="margin-private"><span>menu</span></center>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-1 col-lg-2"></div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- bagian copyright footer-->
-    <footer class="row no-gutters">
-      <div class="container-fluid">
-        <div class="row no-gutters">
-          <div class="col-sm-1 col-md-2 col-lg-3"></div>
-          <div class="col-sm-10 col-md-8 col-lg-6">
-            <center class="margin-private"><span>copyright &copy; 2017</span></center>
-          </div>
-          <div class="col-sm-1 col-md-2 col-lg-3"></div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
