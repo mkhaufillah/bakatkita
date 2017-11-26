@@ -5,7 +5,7 @@ $(document).ready(function(){
   // penambahan halaman dummy
   for (var i = 0; i < 7; i++) {
     $('#category').append(
-      "<div class='card'>" +
+      "<div class='card card-anim'>" +
         "<div class='card-image waves-effect waves-block waves-light'>" +
           "<img class='activator' src='assets/img/background1.jpg'>" +
         "</div>" +
@@ -24,7 +24,6 @@ $(document).ready(function(){
       "</div>"
     );
   }
-
   for (var i = 0; i < 4; i++) {
     $("#fitur").append(
       "<div class='carousel-item light-blue grey-text text-lighten-5'>" +
@@ -35,7 +34,6 @@ $(document).ready(function(){
       "</div>"
     );
   }
-
   var quote = "“Hard work beats talent when talent fails to work hard.”";
   var quoteAs = " - Kevin Durant - "
   $('#quote').append(
@@ -67,7 +65,7 @@ $(document).ready(function(){
 
   //card
   if (!isMobile) {
-    $('.card').mouseenter(function() {
+    $('.card-anim').mouseenter(function() {
       $(this).animateCss('bounce');
     });
   }
@@ -119,7 +117,6 @@ $(document).ready(function(){
         console.log(form);
     }
   });
-
   $('#form-login').validate();
   $('#form-daftar-agent').validate();
   $('#form-daftar-boy').validate();
@@ -132,6 +129,7 @@ $(document).ready(function(){
     $('.anim-show').css('display', 'none');
   }
 
+  //forms
   $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15, // Creates a dropdown of 15 years to control year,
@@ -140,6 +138,21 @@ $(document).ready(function(){
     close: 'Ok',
     closeOnSelect: false // Close upon selecting a date,
   });
-
   $('select').material_select();
+
+  //collapsible
+  $('.collapsible').collapsible({
+    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
+  $('.collapsible .collapsible-header').on('click', function(event) {
+      var target = $(this);
+      setTimeout(function() {
+        if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 500);
+        }
+      }, 300);
+  });
 });

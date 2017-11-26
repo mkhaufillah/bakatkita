@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="SSD TEAM - DDAP" />
+  	<meta name="description" content="bakatkita corps" />
+  	<meta name="keywords"  content="bakat,talent" />
     <!--Mobile Optimized-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- URL Theme Color untuk Chrome, Firefox OS, Opera dan Vivaldi -->
-    <meta name="theme-color" content="#1976d2" />
+    <meta name="theme-color" content="#0288D1" />
     <!-- URL Theme Color untuk Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#1976d2" />
+    <meta name="msapplication-navbutton-color" content="#0288D1" />
     <!-- URL Theme Color untuk iOS Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1976d2" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0288D1" />
 
     <title>bakatkita</title>
 
@@ -18,125 +23,108 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- font family -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- palette -->
-    <link rel="stylesheet" href="../css/palette.css">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <!-- animasi -->
+    <link rel="stylesheet" href="../css/animate.min.css">
     <!-- private css -->
     <link rel="stylesheet" href="../css/index.css">
 
-    <!--Import jQuery before materialize.js-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Import lib-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <!-- dragging page -->
+    <script src="../js/drag.js"></script>
+    <!-- private js -->
     <script src="../js/index.js"></script>
-    <script src="../js/jQuery-optim.js"></script>
   </head>
   <body>
     <!-- navbar -->
-    <nav>
-      <div class="nav-wrapper dark-primary-color">
-        <div class="container">
-        <a href="#!" class="brand-logo">bakatkita.id</a>
-        <ul class="right hide-on-med-and-down">
-          <li class="active"><a href="#">Beranda</a></li>
-          <li><a href="#">Komunitas</a></li>
-          <li><a href="#">Progress</a></li>
-          <li><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
-          <li><a class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li class="active"><a href="#">Beranda</a></li>
-          <li><a href="#">Komunitas</a></li>
-          <li><a href="#">Progress</a></li>
-          <li><a href="#">Notifikasi<span class="new badge right" data-badge-caption="baru">2</span></a></li>
-          <li>
-          </li>
-        </ul>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <a class="modal-trigger right hide-on-large-only" href="#modal1"><i class="material-icons">search</i></a>
-      </div>
-    </div>
-    </nav>
-
-<!-- modal for search bar -->
-<div id="modal1" class="modal bottom-sheet">
-  <div class="modal-content">
-    <div class="nav-wrapper accent-color">
+    <div class="navbar-fixed">
       <nav>
-        <form>
-          <div class="input-field">
-            <input id="search" type="search">
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i type="reset" class="material-icons">close</i>
-          </div>
-        </form>
+        <div class="nav-wrapper light-blue darken-2">
+          <!-- <div class="container"> -->
+            <a href="#!" class="brand-logo">bakatkita.id</a>
+            <ul class="right hide-on-med-and-down">
+              <li class="active"><a href="#">Beranda</a></li>
+              <li><a href="#">Komunitas</a></li>
+              <li><a href="#">Progress</a></li>
+              <li><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
+              <li><a class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a></li>
+            </ul>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-large-only">
+              <li>
+                <a class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a>
+              </li>
+            </ul>
+          <!-- </div> -->
+        </div>
       </nav>
     </div>
-  </div>
-</div>
 
-  <!-- content -->
-    <div class="row container">
+    <!-- content -->
+    <div class="row">
       <!-- left row -->
-      <div class="hide-on-med-and-down">
-        <div class="col s12 m4 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image valign-wrapper">
-                  <img src="../assets/man.png">
+      <div class="col s0 m0 l3 hide-on-med-and-down">
+        <div class="row">
+          <!-- card profil -->
+          <div class="col s12 margin-private-top">
+            <div class="card">
+              <div class="card-image valign-wrapper">
+                <img src="../assets/man.png">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h6 class="center overflow-text-set">Paijo Stuart</h6>
                 </div>
-                <div class="card-stacked">
-                  <div class="card-content">
-                    <h5 class="header">Paijo Stuart</h5>
-                    <p>Bergabung sejak Desember 2017</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">Settings</a>
-                    <a href="#">Logout</a>
-                  </div>
+                <div class="wrap">
+                  <a href="#" class="waves-effect waves-light btn col s12 light-blue darken-2">Settings</a>
+                  <a href="#" class="waves-effect waves-light btn col s12 red ">Logout</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <h5 class="header">Komunitas</h5>
+          <!-- card komunitas -->
+          <div class="col s12 margin-private-top">
+            <h5>Komunitas</h5>
             <div class="collection">
-              <a href="#!" class="collection-item">Desura Music Club</a>
-              <a href="#!" class="collection-item">Pretzelicious</a>
+              <a href="#!" class="collection-item overflow-text-set">Desura Music Club</a>
+              <a href="#!" class="collection-item overflow-text-set">Pretzelicious</a>
             </div>
           </div>
-          <div class="row">
-            <h5 class="header">Coach</h5>
+          <!-- card pelatih -->
+          <div class="col s12">
+            <h5>Pelatih</h5>
             <ul class="collapsible" data-collapsible="accordion">
               <li>
-                <div class="collapsible-header">Desura Music Club</div>
+                <div class="collapsible-header overflow-text-set">Desura Music Club</div>
                 <div class="collapsible-body">
-                  <div class="card">
-                    <div class="card-image valign-wrapper">
-                      <img src="../assets/man.png">
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content">
-                        <h5 class="header">Juki</h5>
-                        <p>DesuraMC Coach - Rock Specialist</p>
+                  <div class="row">
+                    <img src="../assets/man.png" class="col s12">
+                    <div class="col s12">
+                      <h6 class="center col s12 margin-private overflow-text-set">Manuel safir</h6>
+                      <div class="wrap">
+                        <a href="#" class="waves-effect waves-light btn col s12 light-blue darken-2">Settings</a>
+                        <a href="#" class="waves-effect waves-light btn col s12 red ">Logout</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="collapsible-header">Pretzelicious</div>
+                <div class="collapsible-header overflow-text-set">Pretzelicious</div>
                 <div class="collapsible-body">
-                  <div class="card">
-                    <div class="card-image valign-wrapper">
-                      <img src="../assets/man.png">
-                    </div>
-                    <div class="card-stacked">
-                      <div class="card-content">
-                        <h5 class="header">Chef Bronx Hexa</h5>
-                        <p>Pretzelicious Chief Coach</p>
+                  <div class="row">
+                    <img src="../assets/man.png" class="col s12">
+                    <div class="col s12">
+                      <h6 class="center col s12 margin-private overflow-text-set">Manuel safir</h6>
+                      <div class="wrap">
+                        <a href="#" class="waves-effect waves-light btn col s12 light-blue darken-2">Settings</a>
+                        <a href="#" class="waves-effect waves-light btn col s12 red ">Logout</a>
                       </div>
                     </div>
                   </div>
@@ -146,202 +134,264 @@
           </div>
         </div>
       </div>
+
       <!-- center -->
       <div class="col s12 m12 l6">
-        <!-- left sidebar -->
-        <div class="row hide-on-large-only">
-          <div class="col s12 m12">
-            <div class="row">
-              <div class="card horizontal">
-                <div class="card-image valign-wrapper">
-                  <img style="width:100px;" src="../assets/man.png">
-                </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <h5 class="header">Paijo Stuart</h5>
-                      <p>Bergabung sejak Desember 2017</p>
-                    </div>
-                    <div class="card-action right-align">
-                      <a href="#">Settings</a>
-                      <a href="#">Logout</a>
-                    </div>
+        <div class="row">
+          <!-- rekomendasi komunitas-->
+          <div class="col s12 margin-private-top">
+            <div class="wrap">
+              <div class="col s12">
+                <div class="card sticky-action">
+                  <div class="card-content">
+                    <h5 class="overflow-text-set">Rekomendasi Komunitas</h5>
                   </div>
                 </div>
-            </div>
-          </div>
-        </div>
-
-        <h5 class="header">Rekomendasi Komunitas</h5>
-          <div class="row">
-            <div class="col s12 m6 l6">
-              <div class="card sticky-action">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="../assets/gonedrock.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Gone D-Rock</span>
-                  <p>Komunitas Musik</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Bergabung Sekarang</a>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Gone D-Rock<i class="material-icons right">close</i></span>
-                  <p>Improve your "Rocking" skill with the no.1 rock music community. Join us and collaborate with 100+ members</p>
+              </div>
+              <!-- card 1 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/gonedrock.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Gone D-Rock</span>
+                    <p class="overflow-text-set">Komunitas Musik</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col s12 m6 l6">
-              <div class="card sticky-action">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="../assets/mushroomiac.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Mushroomiac!</span>
-                  <p>Komunitas Hobi</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Bergabung Sekarang</a>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Mushroomiac!<i class="material-icons right">close</i></span>
-                  <p>Mari memasak bersama Mushroomiac! Gabung sekarang dan dapatkan berbagai macam resep.</p>
+              <!-- card 2 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/mushroomiac.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Mushroomiac!</span>
+                    <p class="overflow-text-set">Komunitas Hobi</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col s12 m6 l6">
-              <div class="card sticky-action">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="../assets/orcha.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Orcha Orchestra</span>
-                  <p>Komunitas Musik</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Bergabung Sekarang</a>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Orcha Orchestra<i class="material-icons right">close</i></span>
-                  <p>We made music by combining classic and modern genre. Be free to mix your own music idea in here.</p>
+              <!-- card 3 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/orcha.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Orcha Orchestra</span>
+                    <p class="overflow-text-set">Komunitas Musik</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col s12 m6 l6">
-              <div class="card sticky-action">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="../assets/foxigami.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Foxigami</span>
-                  <p>Komunitas Hobi</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">Bergabung Sekarang</a>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Foxigami<i class="material-icons right">close</i></span>
-                  <p>Kami mengajak anda untuk berpikir kreatif dalam memanfaatkan barang-barang bekas. Gabung sekarang dan kembangkan kreativitas Anda!</p>
+              <!-- card 4 -->
+              <div class="col s12 m6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/foxigami.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Foxigami</span>
+                    <p>Komunitas Hobi</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Bergabung</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-            <div class="row">
               <div class="col s12">
-                <center><a href="#!" class="btn waves-effect waves-orange">Lihat Semua</a></center>
+                <div class="card sticky-action">
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Lihat semua</a>
+                  </div>
+                </div>
               </div>
             </div>
-        </div>
-      <!-- right sidebar -->
-      <div class="hide-on-med-and-down">
-        <div class="col s12 m4 l3">
-          <div class="row">
-            <h5 class="header">Kategori Populer</h5>
-            <ul class="collection">
-              <li class="collection-item avatar">
-             <img src="../assets/guitar_96px.png" alt="" class="circle">
-             <span class="title">Musik</span>
-             <p>Instrumen Gitar
-             </p>
-           </li>
-              <li class="collection-item avatar">
-             <img src="../assets/piano_96px.png" alt="" class="circle">
-             <span class="title">Musik</span>
-             <p>Instrumen Piano
-             </p>
-           </li>
-              <li class="collection-item avatar">
-             <img src="../assets/soccer_96px.png" alt="" class="circle">
-             <span class="title">Olah Raga</span>
-             <p>Sepak Bola
-             </p>
-           </li>
-              <li class="collection-item avatar">
-             <img src="../assets/clapperboard_96px.png" alt="" class="circle">
-             <span class="title">Sinematografi</span>
-             <p>Film Pendek
-             </p>
-           </li>
-              <li class="collection-item avatar">
-                <img src="../assets/badminton_96px.png" alt="" class="circle">
-                <span class="title">Olah Raga</span>
-                <p>Bulu Tangkis</p>
-              </li>
-            </ul>
           </div>
-          <div class="row">
-            <h5 class="header">Semua Kategori</h5>
+          <!-- rekomendasi pelatih -->
+          <div class="col s12 margin-private-top">
+            <div class="wrap">
+              <div class="col s12">
+                <div class="card sticky-action">
+                  <div class="card-content">
+                    <h5 class="overflow-text-set">Rekomendasi Pelatih</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- card 1 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/gonedrock.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Gone D-Rock</span>
+                    <p class="overflow-text-set">Komunitas Musik</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/mushroomiac.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Mushroomiac!</span>
+                    <p class="overflow-text-set">Komunitas Hobi</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="col s12 m6 l6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/orcha.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Orcha Orchestra</span>
+                    <p class="overflow-text-set">Komunitas Musik</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Bergabung</a>
+                  </div>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="col s12 m6">
+                <div class="card sticky-action">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="../assets/foxigami.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Foxigami</span>
+                    <p>Komunitas Hobi</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Bergabung</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12">
+                <div class="card sticky-action">
+                  <div class="card-action">
+                    <a href="#" class="overflow-text-set">Lihat semua</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right sidebar -->
+      <div class="col s0 m0 l3 hide-on-med-and-down">
+        <div class="row">
+          <!-- kategori populer -->
+          <div class="col s12 margin-private-top">
+            <h5>Kategori Populer</h5>
+            <div class="collection">
+              <a href="#" class="collection-item avatar">
+                <img src="../assets/guitar_96px.png" alt="" class="circle">
+                <span class="title overflow-text-set">Musik</span>
+                <p class="overflow-text-set">Instrumen Gitar</p>
+                <p class="overflow-text-set">985 peminat</p>
+              </a>
+              <a href="#" class="collection-item avatar">
+                <img src="../assets/piano_96px.png" alt="" class="circle">
+                <span class="title overflow-text-set">Musik</span>
+                <p class="overflow-text-set">Instrumen Piano</p>
+                <p class="overflow-text-set">765 peminat</p>
+              </a>
+              <a href="#" class="collection-item avatar">
+                <img src="../assets/soccer_96px.png" alt="" class="circle">
+                <span class="title overflow-text-set">Olah Raga</span>
+                <p class="overflow-text-set">Sepak Bola</p>
+                <p class="overflow-text-set">300 peminat</p>
+              </a>
+              <a href="#" class="collection-item avatar">
+                <img src="../assets/clapperboard_96px.png" alt="" class="circle">
+                <span class="title overflow-text-set">Sinematografi</span>
+                <p class="overflow-text-set">Film Pendek</p>
+                <p class="overflow-text-set">197 peminat</p>
+              </a>
+              <a href="#" class="collection-item avatar">
+                <img src="../assets/badminton_96px.png" alt="" class="circle">
+                <span class="title overflow-text-set">Olah Raga</span>
+                <p class="overflow-text-set">Bulu Tangkis</p>
+                <p class="overflow-text-set">187 peminat</p>
+              </a>
+            </div>
+          </div>
+          <!-- semua kategori -->
+          <div class="col s12">
+            <h5>Semua Kategori</h5>
             <ul class="collapsible" data-collapsible="accordion">
               <li>
-                <div class="collapsible-header"><i class="material-icons">directions_bike</i>Olah Raga</div>
+                <div class="collapsible-header overflow-text-set"><i class="material-icons">directions_bike</i>Olah Raga</div>
                 <div class="collapsible-body">
                   <ul class="collection">
-                    <a class="collection-item" href="#">Sepak Bola</a>
-                    <a class="collection-item" href="#">Basket</a>
-                    <a class="collection-item" href="#">Badminton</a>
-                    <a class="collection-item" href="#">Atletik</a>
+                    <a class="collection-item overflow-text-set" href="#">Sepak Bola</a>
+                    <a class="collection-item overflow-text-set" href="#">Basket</a>
+                    <a class="collection-item overflow-text-set" href="#">Badminton</a>
+                    <a class="collection-item overflow-text-set" href="#">Atletik</a>
                   </ul>
                 </div>
               </li>
               <li>
-             <div class="collapsible-header"><i class="material-icons">videogame_asset</i>Games</div>
+             <div class="collapsible-header overflow-text-set"><i class="material-icons">videogame_asset</i>Games</div>
              <div class="collapsible-body">
                <ul class="collection">
-                <a class="collection-item" href="#">CS:GO e-Sports</a>
-                <a class="collection-item" href="#">Arena of Valor e-Sports</a>
-                <a class="collection-item" href="#">DoTA 2 e-Sports</a>
-                <a class="collection-item" href="#">Point Blank e-Sports</a>
+                <a class="collection-item overflow-text-set" href="#">CS:GO e-Sports</a>
+                <a class="collection-item overflow-text-set" href="#">Arena of Valor e-Sports</a>
+                <a class="collection-item overflow-text-set" href="#">DoTA 2 e-Sports</a>
+                <a class="collection-item overflow-text-set" href="#">Point Blank e-Sports</a>
               </ul>
              </div>
            </li>
               <li>
-             <div class="collapsible-header"><i class="material-icons">music_note</i>Musik</div>
+             <div class="collapsible-header overflow-text-set"><i class="material-icons">music_note</i>Musik</div>
              <div class="collapsible-body">
                <ul class="collection">
-                 <a class="collection-item" href="#">Instrumen Gitar</a>
-                 <a class="collection-item" href="#">Instrumen Piano</a>
-                 <a class="collection-item" href="#">Instrumen Perkusi</a>
-                 <a class="collection-item" href="#">Instrumen Etnik</a>
+                 <a class="collection-item overflow-text-set" href="#">Instrumen Gitar</a>
+                 <a class="collection-item overflow-text-set" href="#">Instrumen Piano</a>
+                 <a class="collection-item overflow-text-set" href="#">Instrumen Perkusi</a>
+                 <a class="collection-item overflow-text-set" href="#">Instrumen Etnik</a>
               </ul>
             </div>
            </li>
               <li>
-                <div class="collapsible-header"><i class="material-icons">color_lens</i>Seni</div>
+                <div class="collapsible-header overflow-text-set"><i class="material-icons">color_lens</i>Seni</div>
                 <div class="collapsible-body">
                   <ul class="collection">
-                    <a class="collection-item" href="#">Sinematografi</a>
-                    <a class="collection-item" href="#">Drama</a>
-                    <a class="collection-item" href="#">Seni tari</a>
+                    <a class="collection-item overflow-text-set" href="#">Sinematografi</a>
+                    <a class="collection-item overflow-text-set" href="#">Drama</a>
+                    <a class="collection-item overflow-text-set" href="#">Seni tari</a>
                   </ul>
                 </div>
               </li>
               <li>
-                <div class="collapsible-header"><i class="material-icons">lightbulb_outline</i>Hobi</div>
+                <div class="collapsible-header overflow-text-set"><i class="material-icons">lightbulb_outline</i>Hobi</div>
                 <div class="collapsible-body">
                   <ul class="collection">
-                    <a class="collection-item" href="#">Memasak</a>
-                    <a class="collection-item" href="#">Creative Work</a>
-                    <a class="collection-item" href="#">Lain-lain</a>
+                    <a class="collection-item overflow-text-set" href="#">Memasak</a>
+                    <a class="collection-item overflow-text-set" href="#">Creative Work</a>
+                    <a class="collection-item overflow-text-set" href="#">Lain-lain</a>
                   </ul>
                 </div>
               </li>
@@ -349,5 +399,16 @@
           </div>
         </div>
       </div>
+
+      <!-- navbar kanan -->
+      <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="#">Beranda</a></li>
+        <li><a href="#">Komunitas</a></li>
+        <li><a href="#">Progress</a></li>
+        <li><a href="#">Notifikasi<span class="new badge right" data-badge-caption="baru">2</span></a></li>
+        <li>
+        </li>
+      </ul>
     </div>
   </body>
+</html>
