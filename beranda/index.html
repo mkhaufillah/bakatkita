@@ -46,22 +46,25 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper light-blue darken-2">
-          <!-- <div class="container"> -->
-            <a href="#!" class="brand-logo">bakatkita.id</a>
-            <ul class="right hide-on-med-and-down">
-              <li class="active"><a href="#">Beranda</a></li>
-              <li><a href="#">Komunitas</a></li>
-              <li><a href="#">Progress</a></li>
-              <li><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
-              <li><a class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a></li>
-            </ul>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-large-only">
-              <li>
-                <a id="search" class="modal-trigger" href="#modal1"><i class="material-icons">search</i></a>
-              </li>
-            </ul>
-          <!-- </div> -->
+          <a href="#!" class="brand-logo">bakatkita.id</a>
+          <ul class="right hide-on-med-and-down">
+            <li class="active list-nav"><a href="#">Beranda</a></li>
+            <li class="list-nav"><a href="#">Komunitas</a></li>
+            <li class="list-nav"><a href="#">Progress</a></li>
+            <li class="list-nav"><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
+            <li><a id="search" href="#"><i class="material-icons">search</i></a></li>
+            <li>
+              <form>
+                <input id="cari" type="text" name="search" placeholder="Search..">
+              </form>
+            </li>
+          </ul>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-large-only">
+            <li>
+              <a href="#"><i class="material-icons">search</i></a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
@@ -418,14 +421,12 @@
         </div>
       </div>
 
-      <!-- navbar kanan -->
+      <!-- navbar kiri -->
       <ul class="side-nav" id="mobile-demo">
         <li class="active"><a href="#">Beranda</a></li>
         <li><a href="#">Komunitas</a></li>
         <li><a href="#">Progress</a></li>
         <li><a href="#">Notifikasi<span class="new badge right" data-badge-caption="baru">2</span></a></li>
-        <li>
-        </li>
       </ul>
     </div>
   </body>

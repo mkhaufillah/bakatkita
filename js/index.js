@@ -146,8 +146,22 @@ $(document).ready(function(){
   });
 
   //search
-  $('search').click(function() {
-
+  var conSearch = false;
+  $('#search').click(function() {
+    if (!conSearch) {
+      $('#cari').css('padding', '9px');
+      $('#cari').css('width', '500px');
+      $('#cari').focus();
+      $('.list-nav').css('display', 'none');
+      $('#search').parent().attr('class', 'active');
+      conSearch = true;
+    } else {
+      $('#cari').css('padding', '0px');
+      $('#cari').css('width', '0px');
+      $('.list-nav').css('display', 'inline');
+      $('#search').parent().attr('class', '');
+      conSearch = false;
+    }
   });
 
 });
