@@ -149,19 +149,31 @@ $(document).ready(function(){
   var conSearch = false;
   $('#search').click(function() {
     if (!conSearch) {
+      $('#search').parent().attr('class', 'active');
+      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>close</i>" );
       $('#cari').css('padding', '9px');
-      $('#cari').css('width', '500px');
+      $('#cari').css('width', '480px');
       $('#cari').focus();
       $('.list-nav').css('display', 'none');
-      $('#search').parent().attr('class', 'active');
       conSearch = true;
     } else {
+      $('#search').parent().attr('class', '');
+      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>search</i>" );
       $('#cari').css('padding', '0px');
       $('#cari').css('width', '0px');
       $('.list-nav').css('display', 'inline');
-      $('#search').parent().attr('class', '');
       conSearch = false;
     }
+  });
+
+  //search mobile
+  $('#search-mobile').click(function() {
+    $('.nav-search').attr('class', 'nav-search');
+    $('#cari-mobile').focus();
+  });
+
+  $('.close-mobile').click(function() {
+    $('.nav-search').attr('class', 'nav-search hide');
   });
 
 });

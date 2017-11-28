@@ -182,13 +182,13 @@ section {
 
 /*search*/
 #cari {
-    width: 0px;
-    font-size: 16px;
-    padding: 0px;
-    background: #ffffff;
-    color: #000000;
-    -webkit-transition: padding 0.4s width 0.4s ease-in-out;
-    transition: padding 0.4s width 0.4s ease-in-out;
+  width: 0px;
+  font-size: 16px;
+  padding: 0px;
+  background: #ffffff;
+  color: #000000;
+  -webkit-transition: display 0.4s padding 0.4s width 0.4s ease-in-out;
+  transition: display 0.4s padding 0.4s width 0.4s ease-in-out;
 }
 
 /*heading underline*/
@@ -196,7 +196,7 @@ section {
   border-bottom: 3px solid #ff5722;
   display: inline-block;
   margin-bottom: 12px;
-  width:50vw;
+  width:50vh;
   transition: all 0.5s ease-in-out, scale 0.5s ease-in-out;
 }
 
