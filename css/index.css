@@ -179,6 +179,7 @@ section {
   white-space: nowrap;
 }
 
+
 /*search*/
 #cari {
     width: 0px;
@@ -188,4 +189,22 @@ section {
     color: #000000;
     -webkit-transition: padding 0.4s width 0.4s ease-in-out;
     transition: padding 0.4s width 0.4s ease-in-out;
+}
+
+/*heading underline*/
+.underhead {
+  border-bottom: 3px solid #ff5722;
+  display: inline-block;
+  margin-bottom: 12px;
+  width:50vw;
+  transition: all 0.5s ease-in-out, scale 0.5s ease-in-out;
+}
+
+.underhead:hover{
+  border-bottom: 3px solid #0288d1;
+  width: 100%;
+}
+
+.underhead::after{
+  transition: all 0.5s ease-in-out;
 }
