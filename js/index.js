@@ -144,15 +144,10 @@ $(document).ready(function(){
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
-  $('.collapsible .collapsible-header').on('click', function(event) {
-      var target = $(this);
-      setTimeout(function() {
-        if( target.length ) {
-          event.preventDefault();
-          $('html, body').animate({
-              scrollTop: target.offset().top
-          }, 500);
-        }
-      }, 300);
+
+  //search
+  $('search').click(function() {
+
   });
+
 });
