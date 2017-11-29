@@ -176,4 +176,10 @@ $(document).ready(function(){
     $('.nav-search').attr('class', 'nav-search hide');
   });
 
+  $('#cari-mobile').focusout(function() {
+    $('.nav-search').attr('class', 'nav-search hide');
+  });
+
+  
+
 });
