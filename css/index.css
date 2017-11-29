@@ -190,7 +190,7 @@ section {
   transition: display 0.4s padding 0.4s width 0.4s ease-in-out;
 }
 
-/*heading underline*/
+/*main heading underline*/
 .underhead {
   border-bottom: 3px solid #ff5722;
   display: inline-block;

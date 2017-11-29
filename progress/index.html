@@ -41,7 +41,8 @@
     <!-- private js -->
     <script src="../js/index.js"></script>
     <!-- chartjs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <!-- <script type="text/javascript" src="../js/grafik.js"></script> -->
   </head>
   <body>
     <!-- navbar -->
@@ -146,7 +147,7 @@
       </div>
 
       <!-- center -->
-      <div class="col s12 m12 l6">
+      <div class="col s12 m12 l9">
         <div class="row">
           <div class="col s12 margin-private-top">
             <div class="wrap">
@@ -170,253 +171,135 @@
               </div>
               <!-- rekomendasi komunitas -->
               <div class="col s12">
-                <h5 class="underhead">Rekomendasi Komunitas</h5>
+                <h5 class="underhead">Progress Saya</h5>
               </div>
-              <!-- card 1 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/gonedrock.jpg">
+              <!-- graph 1-->
+              <div class="col s12 m12 l6">
+                <div class="row">
+                  <div class="chart-container">
+                      <canvas id="canvas1"></canvas>
+                      <script type="text/javascript">
+                      var ctx = document.getElementById("canvas1").getContext('2d');
+                      var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["Desember 2017", "Januari 2018", "Februari 2018", "Maret 2018", "April 2018", "Mei 2018"],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            }
+                        }
+                      });
+                      </script>
+                    </div>
                   </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Gone D-Rock</span>
-                    <p class="overflow-text-set">Komunitas Musik</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
+                </div>
+              <div class="col s12 m12 l6">
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-content">
+                        <h6><b>Pelatih</b></h6>
+                        <p>Manuel Safir</p>
+                        <h6><b>Minat/Bakat</b></h6>
+                        <p>Musik</p>
+                        <h6><b>Deskripsi</b></h6>
+                        <p>Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- card 2 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/mushroomiac.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Mushroomiac!</span>
-                    <p class="overflow-text-set">Komunitas Hobi</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <!-- card 3 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/orcha.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Orcha Orchestra</span>
-                    <p class="overflow-text-set">Komunitas Musik</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <!-- card 4 -->
-              <div class="col s12 m6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/foxigami.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Foxigami</span>
-                    <p>Komunitas Hobi</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12">
-                <div class="card sticky-action">
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Lihat semua</a>
+              <!-- graph 2-->
+              <div class="col s12 m12 l6">
+                <div class="row">
+                  <div class="chart-container">
+                      <canvas id="canvas2"></canvas>
+                      <script type="text/javascript">
+                      var ctx = document.getElementById("canvas2").getContext('2d');
+                      var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["Desember 2017", "Januari 2018", "Februari 2018", "Maret 2018", "April 2018", "Mei 2018"],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            }
+                        }
+                      });
+                      </script>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- rekomendasi pelatih -->
-          <div class="col s12 margin-private-top">
-            <div class="wrap">
-              <div class="col s12">
-                <!-- title -->
-                <h5 class="underhead">Rekomendasi Komunitas</h5>
-              </div>
-              <!-- card 1 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/gonedrock.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Gone D-Rock</span>
-                    <p class="overflow-text-set">Komunitas Musik</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <!-- card 2 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/mushroomiac.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Mushroomiac!</span>
-                    <p class="overflow-text-set">Komunitas Hobi</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <!-- card 3 -->
-              <div class="col s12 m6 l6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/orcha.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4 overflow-text-set">Orcha Orchestra</span>
-                    <p class="overflow-text-set">Komunitas Musik</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <!-- card 4 -->
-              <div class="col s12 m6">
-                <div class="card sticky-action">
-                  <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="../assets/foxigami.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Foxigami</span>
-                    <p>Komunitas Hobi</p>
-                  </div>
-                  <div class="card-action">
-                    <a href="#">Bergabung</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12">
-                <div class="card sticky-action">
-                  <div class="card-action">
-                    <a href="#" class="overflow-text-set">Lihat semua</a>
+              <div class="col s12 m12 l6">
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-content">
+                        <h6><b>Pelatih</b></h6>
+                        <p>Manuel Safir</p>
+                        <h6><b>Minat/Bakat</b></h6>
+                        <p>Musik</p>
+                        <h6><b>Deskripsi</b></h6>
+                        <p>Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- right sidebar -->
-      <div class="col s0 m0 l3 hide-on-med-and-down">
-        <div class="row">
-          <!-- kategori populer -->
-          <div class="col s12 margin-private-top">
-            <h5>Kategori Populer</h5>
-            <div class="collection">
-              <a href="#" class="collection-item avatar">
-                <img src="../assets/guitar_96px.png" alt="" class="circle">
-                <span class="title overflow-text-set">Musik</span>
-                <p class="overflow-text-set">Instrumen Gitar</p>
-                <p class="overflow-text-set">985 peminat</p>
-              </a>
-              <a href="#" class="collection-item avatar">
-                <img src="../assets/piano_96px.png" alt="" class="circle">
-                <span class="title overflow-text-set">Musik</span>
-                <p class="overflow-text-set">Instrumen Piano</p>
-                <p class="overflow-text-set">765 peminat</p>
-              </a>
-              <a href="#" class="collection-item avatar">
-                <img src="../assets/soccer_96px.png" alt="" class="circle">
-                <span class="title overflow-text-set">Olah Raga</span>
-                <p class="overflow-text-set">Sepak Bola</p>
-                <p class="overflow-text-set">300 peminat</p>
-              </a>
-              <a href="#" class="collection-item avatar">
-                <img src="../assets/clapperboard_96px.png" alt="" class="circle">
-                <span class="title overflow-text-set">Sinematografi</span>
-                <p class="overflow-text-set">Film Pendek</p>
-                <p class="overflow-text-set">197 peminat</p>
-              </a>
-              <a href="#" class="collection-item avatar">
-                <img src="../assets/badminton_96px.png" alt="" class="circle">
-                <span class="title overflow-text-set">Olah Raga</span>
-                <p class="overflow-text-set">Bulu Tangkis</p>
-                <p class="overflow-text-set">187 peminat</p>
-              </a>
-            </div>
-          </div>
-          <!-- semua kategori -->
-          <div class="col s12">
-            <h5>Semua Kategori</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header overflow-text-set"><i class="material-icons">directions_bike</i>Olah Raga</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-                    <a class="collection-item overflow-text-set" href="#">Sepak Bola</a>
-                    <a class="collection-item overflow-text-set" href="#">Basket</a>
-                    <a class="collection-item overflow-text-set" href="#">Badminton</a>
-                    <a class="collection-item overflow-text-set" href="#">Atletik</a>
-                  </ul>
-                </div>
-              </li>
-              <li>
-             <div class="collapsible-header overflow-text-set"><i class="material-icons">videogame_asset</i>Games</div>
-             <div class="collapsible-body">
-               <ul class="collection">
-                <a class="collection-item overflow-text-set" href="#">CS:GO e-Sports</a>
-                <a class="collection-item overflow-text-set" href="#">Arena of Valor e-Sports</a>
-                <a class="collection-item overflow-text-set" href="#">DoTA 2 e-Sports</a>
-                <a class="collection-item overflow-text-set" href="#">Point Blank e-Sports</a>
-              </ul>
-             </div>
-           </li>
-              <li>
-             <div class="collapsible-header overflow-text-set"><i class="material-icons">music_note</i>Musik</div>
-             <div class="collapsible-body">
-               <ul class="collection">
-                 <a class="collection-item overflow-text-set" href="#">Instrumen Gitar</a>
-                 <a class="collection-item overflow-text-set" href="#">Instrumen Piano</a>
-                 <a class="collection-item overflow-text-set" href="#">Instrumen Perkusi</a>
-                 <a class="collection-item overflow-text-set" href="#">Instrumen Etnik</a>
-              </ul>
-            </div>
-           </li>
-              <li>
-                <div class="collapsible-header overflow-text-set"><i class="material-icons">color_lens</i>Seni</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-                    <a class="collection-item overflow-text-set" href="#">Sinematografi</a>
-                    <a class="collection-item overflow-text-set" href="#">Drama</a>
-                    <a class="collection-item overflow-text-set" href="#">Seni tari</a>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header overflow-text-set"><i class="material-icons">lightbulb_outline</i>Hobi</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-                    <a class="collection-item overflow-text-set" href="#">Memasak</a>
-                    <a class="collection-item overflow-text-set" href="#">Creative Work</a>
-                    <a class="collection-item overflow-text-set" href="#">Lain-lain</a>
-                  </ul>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
