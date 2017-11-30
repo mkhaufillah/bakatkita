@@ -73,26 +73,6 @@ $(document).ready(function(){
   //carousel
   $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-  //scrolling
-  var scroll = $(window).scrollTop();
-  if (scroll >= '200') changeNavColor('#0288D1');
-  function changeNavColor(color) {
-    $('.nav-wrapper').css('background', color);
-    $('.nav-wrapper').css('transition', 'background 1s');
-    $('.nav-wrapper').css('-webkit-transition', 'background 1s');
-  }
-  if (!isMobile) {
-    $('body').niceScroll({cursorcolor:"#FFF", cursoropacitymax:0.8});
-  }
-  $(window).scroll(function (event) {
-    scroll = $(window).scrollTop();
-    if (scroll >= '200') {
-      changeNavColor('#0288D1');
-    } else {
-      $('.nav-wrapper').css('background', '');
-    }
-  });
-
   //Modal
   $('.modal').modal({
     dismissible: true,
@@ -144,42 +124,5 @@ $(document).ready(function(){
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
-
-  //search
-  var conSearch = false;
-  $('#search').click(function() {
-    if (!conSearch) {
-      $('#search').parent().attr('class', 'active');
-      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>close</i>" );
-      $('#cari').css('padding', '9px');
-      $('#cari').css('width', '480px');
-      $('#cari').focus();
-      $('.list-nav').css('display', 'none');
-      conSearch = true;
-    } else {
-      $('#search').parent().attr('class', '');
-      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>search</i>" );
-      $('#cari').css('padding', '0px');
-      $('#cari').css('width', '0px');
-      $('.list-nav').css('display', 'inline');
-      conSearch = false;
-    }
-  });
-
-  //search mobile
-  $('#search-mobile').click(function() {
-    $('.nav-search').attr('class', 'nav-search');
-    $('#cari-mobile').focus();
-  });
-
-  $('.close-mobile').click(function() {
-    $('.nav-search').attr('class', 'nav-search hide');
-  });
-
-  $('#cari-mobile').focusout(function() {
-    $('.nav-search').attr('class', 'nav-search hide');
-  });
-
-  
 
 });

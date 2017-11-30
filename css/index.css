@@ -1,7 +1,7 @@
 * {
   font-family: 'Varela Round', sans-serif;
   font-weight: 400;
-  -ms-overflow-style: none;
+  -ms-overflow-style: scroll;
   overflow: -moz-scrollbars-none;
 }
 
@@ -69,7 +69,6 @@ section {
 .scrolling-wrapper {
   width: 100%;
   overflow-x: scroll;
-  overflow-y: hidden;
   display: block;
   white-space: nowrap;
   cursor: grab;
@@ -191,19 +190,33 @@ section {
 }
 
 /*heading underline*/
-.underhead {
-  border-bottom: 3px solid #ff5722;
-  display: inline-block;
-  margin-bottom: 12px;
-  width:50vh;
-  transition: all 0.5s ease-in-out, scale 0.5s ease-in-out;
+@media screen and (min-width:600px) {
+  .underhead:hover{
+    border-bottom: 3px solid #0288d1;
+    width: 100%;
+  }
+
+  .underhead {
+    border-bottom: 3px solid #ff5722;
+    display: inline-block;
+    margin-bottom: 12px;
+    width:45vh;
+    transition: all 0.5s ease-in-out, scale 0.5s ease-in-out;
+  }
 }
 
-.underhead:hover{
-  border-bottom: 3px solid #0288d1;
-  width: 100%;
+@media screen and (max-width:600px) {
+  .underhead {
+    border-bottom: 3px solid #ff5722;
+    display: inline-block;
+    margin-bottom: 12px;
+    width:100%;
+    transition: all 0.5s ease-in-out, scale 0.5s ease-in-out;
+  }
 }
 
-.underhead::after{
-  transition: all 0.5s ease-in-out;
+/*fix dropdown*/
+.input-field .dropdown-content [type="checkbox"]+label {
+  top: -3px !important;
+  display: inline;
 }
