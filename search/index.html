@@ -51,16 +51,10 @@
 
     <!-- content -->
     <div class="row">
-      <!-- left row -->
-      <div id="content-left-bar" class="col s0 m0 l3 hide-on-med-and-down"></div>
-      <script>
-        $('#content-left-bar').load('../assets/page-sniff/sniff-left-bar.html');
-      </script>
-
       <!-- center -->
-      <div id="content-utama" class="col s12 m12 l9"></div>
+      <div id="content-utama" class="col s12"></div>
       <script>
-        $('#content-utama').load('../assets/page-sniff/sniff-content-komunitas.html');
+        $('#content-utama').load('../assets/page-sniff/sniff-content-search.html');
       </script>
 
       <!-- navbar kiri -->
@@ -68,7 +62,7 @@
       <script>
         $('#mobile-demo').load('../assets/page-sniff/sniff-mobile-slide-burger.html');
         $(document).ready(function() {
-          $("#komunitas").attr('class', 'list-nav active');
+          $('#search').parent().attr('class', 'active');
         });
       </script>
     </div>

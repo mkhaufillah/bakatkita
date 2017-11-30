@@ -10,13 +10,14 @@ $(document).ready(function(){
     $(window).scroll(function (event) {
       $('body').getNiceScroll().resize();
     });
+    $('.collapsible').click(function() {
+      $('body').getNiceScroll().resize();
+    });
   }
-  $('.collapsible').click(function() {
-    $('body').getNiceScroll().resize();
-  });
 
   //search
   var conSearch = false;
+  var attr = $('#search').parent().attr('class');
   $('#search').click(function() {
     if (!conSearch) {
       $('#search').parent().attr('class', 'active');
@@ -27,7 +28,7 @@ $(document).ready(function(){
       $('.list-nav').css('display', 'none');
       conSearch = true;
     } else {
-      $('#search').parent().attr('class', '');
+      $('#search').parent().attr('class', attr);
       $('.search-icon').replaceWith( "<i class='material-icons search-icon'>search</i>" );
       $('#cari').css('padding', '0px');
       $('#cari').css('width', '0px');
