@@ -102,11 +102,12 @@ $(document).ready(function(){
   $('#form-daftar-boy').validate();
 
   //header anim
+  var eas = $('.anim-show');
   if (!isMobile) {
-    $('.anim-show').css('display', 'block');
-    $('.anim-show').animateCss('zoomIn');
+    eas.css('display', 'block');
+    eas.animateCss('zoomIn');
   } else {
-    $('.anim-show').css('display', 'none');
+    eas.css('display', 'none');
   }
 
   //forms

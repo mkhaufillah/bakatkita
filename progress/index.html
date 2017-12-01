@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#0288D1" />
 
-    <title>bakatkita</title>
+    <title>Komunitas</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,287 +30,51 @@
     <!-- private css -->
     <link rel="stylesheet" href="../css/index.css">
 
-    <!--Import lib-->
+    <!--Import jquery-->
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/materialize.min.js"></script>
-    <script src="../js/jquery.nicescroll.min.js"></script>
-    <script src="../js/jquery.validate.min.js"></script>
-    <script src="../js/additional-methods.min.js"></script>
-    <!-- dragging page -->
-    <script src="../js/drag.js"></script>
-    <!-- private js -->
-    <script src="../js/index.js"></script>
-    <!-- chartjs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="../js/grafik.js"></script> -->
   </head>
   <body>
     <!-- navbar -->
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper light-blue darken-2">
-          <a href="#!" class="brand-logo">bakatkita.id</a>
-          <ul class="right hide-on-med-and-down">
-            <li class="list-nav"><a href="#">Beranda</a></li>
-            <li class="list-nav"><a href="#">Komunitas</a></li>
-            <li class="active list-nav"><a href="#">Progress</a></li>
-            <li class="list-nav"><a href="#">Notifikasi<span class="new badge" data-badge-caption="baru">2</span></a></li>
-            <li><a id="search" href="#"><i class="material-icons search-icon">search</i></a></li>
-            <li>
-              <form>
-                <input id="cari" type="text" name="search" placeholder="Search..">
-              </form>
-            </li>
-          </ul>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-large-only">
-            <li>
-              <a id="search-mobile" href="#"><i class="material-icons search-icon">search</i></a>
-            </li>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <nav class="nav-search hide">
-        <div class="nav-wrapper light-blue darken-2">
-          <form>
-            <div class="input-field">
-              <input id="cari-mobile" type="search" placeholder="Search..">
-              <i class="material-icons close-mobile">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-    </div>
+    <div id="content-nav" class="navbar-fixed"></div>
+    <script>
+      $('#content-nav').load('../assets/page-sniff/sniff-nav.html');
+    </script>
 
     <!-- content -->
     <div class="row">
       <!-- left row -->
-      <div class="col s0 m0 l3 hide-on-med-and-down">
-        <div class="row">
-          <!-- card profil -->
-          <div class="col s12 margin-private-top">
-            <div class="card">
-              <div class="card-image valign-wrapper">
-                <img src="../assets/man.png">
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5 class="center overflow-text-set">Paijo Stuart</h5>
-                  <p class="center overflow-text-set">Bergabung sejak Desember 2017</p>
-                </div>
-                <div class="wrap">
-                  <a href="#" class="waves-effect waves-light btn col s12 light-blue darken-2">Settings</a>
-                  <a href="#" class="waves-effect waves-light btn col s12 red ">Logout</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- card komunitas -->
-          <div class="col s12 margin-private-top">
-            <h5>Komunitas</h5>
-            <div class="collection">
-              <a href="#!" class="collection-item overflow-text-set">Desura Music Club</a>
-              <a href="#!" class="collection-item overflow-text-set">Pretzelicious</a>
-            </div>
-          </div>
-          <!-- card pelatih -->
-          <div class="col s12">
-            <h5>Pelatih</h5>
-            <ul class="collapsible" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header overflow-text-set">Desura Music Club</div>
-                <div class="collapsible-body">
-                  <div class="row">
-                    <img src="../assets/man.png" class="col s12">
-                    <div class="col s12">
-                      <h6 class="center col s12 margin-private overflow-text-set">Manuel safir</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header overflow-text-set">Pretzelicious</div>
-                <div class="collapsible-body">
-                  <div class="row">
-                    <img src="../assets/man.png" class="col s12">
-                    <div class="col s12">
-                      <h6 class="center col s12 margin-private overflow-text-set">Manuel safir</h6>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div id="content-left-bar" class="col s0 m0 l3 hide-on-med-and-down"></div>
+      <script>
+        $('#content-left-bar').load('../assets/page-sniff/sniff-left-bar.html');
+      </script>
 
       <!-- center -->
-      <div class="col s12 m12 l9">
-        <div class="row">
-          <div class="col s12 margin-private-top">
-            <div class="wrap">
-              <!-- profil -->
-              <div class="col s12 hide-on-large-only">
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img class="hide-on-small-only" height="184px" src="../assets/man.png">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                      <h5 class="overflow-text-set">Paijo Stuart</h5>
-                      <p class="overflow-text-set">Bergabung sejak Desember 2017</p>
-                    </div>
-                    <div class="card-action right-align">
-                      <a href="#" class="waves-effect waves-light btn col s12 m6 light-blue darken-2">Settings</a>
-                      <a href="#" class="waves-effect waves-light btn col s12 m6 red">Logout</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- rekomendasi komunitas -->
-              <div class="col s12">
-                <h5 class="underhead">Progress Saya</h5>
-              </div>
-              <!-- graph 1-->
-              <div class="col s12 m12 l6">
-                <div class="row">
-                  <div class="chart-container">
-                      <canvas id="canvas1"></canvas>
-                      <script type="text/javascript">
-                      var ctx = document.getElementById("canvas1").getContext('2d');
-                      var myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: ["Desember 2017", "Januari 2018", "Februari 2018", "Maret 2018", "April 2018", "Mei 2018"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                      });
-                      </script>
-                    </div>
-                  </div>
-                </div>
-              <div class="col s12 m12 l6">
-                <div class="row">
-                  <div class="col">
-                    <div class="card">
-                      <div class="card-content">
-                        <h6><b>Pelatih</b></h6>
-                        <p>Manuel Safir</p>
-                        <h6><b>Minat/Bakat</b></h6>
-                        <p>Musik</p>
-                        <h6><b>Deskripsi</b></h6>
-                        <p>Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- graph 2-->
-              <div class="col s12 m12 l6">
-                <div class="row">
-                  <div class="chart-container">
-                      <canvas id="canvas2"></canvas>
-                      <script type="text/javascript">
-                      var ctx = document.getElementById("canvas2").getContext('2d');
-                      var myChart = new Chart(ctx, {
-                        type: 'line',
-                        data: {
-                            labels: ["Desember 2017", "Januari 2018", "Februari 2018", "Maret 2018", "April 2018", "Mei 2018"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                      });
-                      </script>
-                    </div>
-                  </div>
-                </div>
-              <div class="col s12 m12 l6">
-                <div class="row">
-                  <div class="col">
-                    <div class="card">
-                      <div class="card-content">
-                        <h6><b>Pelatih</b></h6>
-                        <p>Manuel Safir</p>
-                        <h6><b>Minat/Bakat</b></h6>
-                        <p>Musik</p>
-                        <h6><b>Deskripsi</b></h6>
-                        <p>Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="content-utama" class="col s12 m12 l9"></div>
+      <script>
+        $('#content-utama').load('../assets/page-sniff/sniff-content-progress.html');
+      </script>
 
       <!-- navbar kiri -->
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Komunitas</a></li>
-        <li class="active"><a href="#">Progress</a></li>
-        <li><a href="#">Notifikasi<span class="new badge right" data-badge-caption="baru">2</span></a></li>
-      </ul>
+      <ul id="mobile-demo" class="side-nav"></ul>
+      <script>
+        $('#mobile-demo').load('../assets/page-sniff/sniff-mobile-slide-burger.html');
+        $(document).ready(function() {
+          $("#progress").attr('class', 'list-nav active');
+        });
+      </script>
     </div>
+    
+    <!-- import lib -->
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <script src="../js/chart.bundle.min.js"></script>
+    <!-- dragging page -->
+    <script src="../js/drag.js"></script>
+    <!-- private js -->
+    <script src="../js/index.js"></script>
+    <script src="../js/extras-utama.js"></script>
+    <script src="../js/grafik.js"></script>
   </body>
 </html>
