@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="author" content="SSD TEAM - DDAP" />
+  	<meta name="description" content="bakatkita corps" />
+  	<meta name="keywords"  content="bakat,talent" />
+    <!--Mobile Optimized-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- URL Theme Color untuk Chrome, Firefox OS, Opera dan Vivaldi -->
+    <meta name="theme-color" content="#0288D1" />
+    <!-- URL Theme Color untuk Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0288D1" />
+    <!-- URL Theme Color untuk iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0288D1" />
+
+    <title>Komunitas</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <!-- animasi -->
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <!-- private css -->
+    <link rel="stylesheet" href="../css/index.css">
+
+    <!--Import jquery-->
+    <script src="../js/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div id="content-nav" class="navbar-fixed"></div>
+    <script>
+      $('#content-nav').load('../assets/page-sniff/sniff-nav.html');
+    </script>
+
+    <!-- content -->
+    <div class="row">
+      <!-- left row -->
+      <div id="content-left-bar" class="col s0 m0 l3 hide-on-med-and-down"></div>
+      <script>
+        $('#content-left-bar').load('../assets/page-sniff/sniff-left-bar.html');
+      </script>
+
+      <!-- center -->
+      <div id="content-utama" class="col s12 m12 l9"></div>
+      <script>
+        $('#content-utama').load('../assets/page-sniff/sniff-content-setting.html');
+      </script>
+
+      <!-- navbar kiri -->
+      <ul id="mobile-demo" class="side-nav"></ul>
+      <script>
+        $('#mobile-demo').load('../assets/page-sniff/sniff-mobile-slide-burger.html');
+        $(document).ready(function() {
+          $("#komunitas").attr('class', 'list-nav active');
+        });
+      </script>
+    </div>
+
+    <!-- import lib -->
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <!-- dragging page -->
+    <script src="../js/drag.js"></script>
+    <!-- private js -->
+    <script src="../js/index.js"></script>
+    <script src="../js/extras-utama.js"></script>
+  </body>
+</html>
