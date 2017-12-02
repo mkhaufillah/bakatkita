@@ -119,6 +119,13 @@ $(document).ready(function(){
     close: 'Ok',
     closeOnSelect: false // Close upon selecting a date,
   });
+
+  $('tabs').ready(function(){
+    $('ul.tabs').tabs();
+  });
+    $('tabs').ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
   $('select').material_select();
 
 });
