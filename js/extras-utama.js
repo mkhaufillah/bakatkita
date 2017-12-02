@@ -1,6 +1,12 @@
 $(document).ready(function(){
   var isMobile = window.screen.width <= 991;
 
+  //collapsible
+  var ecolaps = $('.collapsible');
+  ecolaps.collapsible({
+    accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
+
   //scrolling
   var eb = $('body');
   if (!isMobile) {
@@ -11,7 +17,7 @@ $(document).ready(function(){
     $(window).scroll(function (event) {
       eb.getNiceScroll().resize();
     });
-    $('.collapsible').click(function() {
+    ecolaps.click(function() {
       eb.getNiceScroll().resize();
     });
   }
@@ -20,20 +26,19 @@ $(document).ready(function(){
   var conSearch = false;
   var es = $('#search');
   var ec = $('#cari');
-  var esi = $('.search-icon');
   var eln = $('.list-nav');
   es.click(function() {
     if (!conSearch) {
-      es.parent().attr('class', 'active');
-      esi.replaceWith( "<i class='material-icons search-icon'>close</i>" );
+      es.parent().attr('class', 'list-nav active');
+      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>close</i>" );
       ec.css('padding', '9px');
       ec.css('width', '480px');
       ec.focus();
       eln.css('display', 'none');
       conSearch = true;
     } else {
-      es.parent().attr('class', '');
-      esi.replaceWith( "<i class='material-icons search-icon'>search</i>" );
+      es.parent().attr('class', 'list-nav');
+      $('.search-icon').replaceWith( "<i class='material-icons search-icon'>search</i>" );
       ec.css('padding', '0px');
       ec.css('width', '0px');
       eln.css('display', 'inline');

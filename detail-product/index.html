@@ -43,24 +43,28 @@
     <!-- content -->
     <div class="row">
       <!-- left row -->
-      <div id="content-left-bar" class="col s0 m0 l3 hide-on-med-and-down"></div>
+      <div id="content-left-bar" class="col s12 m6 l4"></div>
       <script>
         $('#content-left-bar').load('../assets/page-sniff/sniff-left-bar.html');
+        $(document).ready(function() {
+          $('#button-profil').replaceWith(
+            "<div class='wrap' id='button-profil'>" +
+              "<a id='contract' href='#!' class='waves-effect waves-light btn col s12 deep-orange'>Contract</a>" +
+            "</div>"
+          );
+        });
       </script>
 
       <!-- center -->
-      <div id="content-utama" class="col s12 m12 l9"></div>
+      <div id="content-utama" class="col s12 m6 l8"></div>
       <script>
-        $('#content-utama').load('../assets/page-sniff/sniff-content-progress.html');
+        $('#content-utama').load('../assets/page-sniff/sniff-content-detail-product.html');
       </script>
 
       <!-- navbar kiri -->
       <ul id="mobile-demo" class="side-nav"></ul>
       <script>
         $('#mobile-demo').load('../assets/page-sniff/sniff-mobile-slide-burger.html');
-        $(document).ready(function() {
-          $("#progress").attr('class', 'list-nav active');
-        });
       </script>
     </div>
 
@@ -69,12 +73,10 @@
     <script src="../js/jquery.nicescroll.min.js"></script>
     <script src="../js/jquery.validate.min.js"></script>
     <script src="../js/additional-methods.min.js"></script>
-    <script src="../js/chart.bundle.min.js"></script>
     <!-- dragging page -->
     <script src="../js/drag.js"></script>
     <!-- private js -->
     <script src="../js/index.js"></script>
     <script src="../js/extras-utama.js"></script>
-    <script src="../js/grafik.js"></script>
   </body>
 </html>
