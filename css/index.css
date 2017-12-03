@@ -233,5 +233,16 @@ section {
 .justifying{
   text-align: center;
   font-display: block;
-  letter-spacing: 2vw;
+  letter-spacing: 2vh;
+}
+
+.overflow-all {
+  overflow: scroll;
+  display: block;
+}
+
+.isi-message-komunitas {
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid #bdbdbd;
 }

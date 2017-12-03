@@ -78,4 +78,12 @@ $(document).ready(function(){
     en.parent().css('width', 'auto');
   });
 
+  $('tabs').ready(function(){
+    $('ul.tabs').tabs();
+  });
+    $('tabs').ready(function(){
+    $('ul.tabs').tabs('select_tab', 'tab_id');
+  });
+  $('select').material_select();
+
 });
