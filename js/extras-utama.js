@@ -65,19 +65,31 @@ $(document).ready(function(){
   //notification
   var notifIsFocus = false;
   var en = $("#notifikasi");
+  en.dropdown({
+    belowOrigin: true,
+    stopPropagation: true
+  });
 
-  en.focus(function() {
-    en.parent().attr('class', 'list-nav active');
-    en.parent().css('width', '70vh');
-    en.dropdown('open');
+  en.click(function() {
+    if (!notifIsFocus) {
+      en.parent().attr('class', 'list-nav active');
+      en.parent().css('width', '70vh');
+      en.dropdown('open');
+      notifIsFocus = true;
+    } else {
+      en.parent().attr('class', 'list-nav');
+      en.parent().css('width', 'auto');
+      notifIsFocus = false;
+    }
   });
 
   en.focusout(function() {
-    en.dropdown('close');
     en.parent().attr('class', 'list-nav');
     en.parent().css('width', 'auto');
+    notifIsFocus = false;
   });
 
+  // tabs
   $('tabs').ready(function(){
     $('ul.tabs').tabs();
   });
