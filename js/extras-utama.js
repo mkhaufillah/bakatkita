@@ -82,6 +82,8 @@ $(document).ready(function(){
   var es = $('#search');
   var ec = $('#cari');
   var eln = $('.list-nav');
+  var esel = $('#cat-all');
+  esel.css('display', 'none');
   es.click(function() {
     if (!conSearch) {
       es.parent().attr('class', 'list-nav active');
@@ -90,6 +92,7 @@ $(document).ready(function(){
       ec.css('width', '480px');
       ec.focus();
       eln.css('display', 'none');
+      esel.css('display', 'inline');
       conSearch = true;
     } else {
       es.parent().attr('class', 'list-nav');
@@ -97,6 +100,7 @@ $(document).ready(function(){
       ec.css('padding', '0px');
       ec.css('width', '0px');
       eln.css('display', 'inline');
+      esel.css('display', 'none');
       conSearch = false;
     }
   });
