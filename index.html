@@ -59,13 +59,15 @@
                       btn-large
                       light-blue darken-2
                       margin-private
-                      col s12 m5 offset-m1 l3 offset-l3">Saya pencari bakat</a>
+                      col s12 m5 offset-m1 l3 offset-l3
+                      modal-trigger" href="#daftar-lanjut-agent">Saya pencari bakat</a>
             <a class="waves-effect
                       waves-light
                       btn-large
                       deep-orange
                       margin-private
-                      col s12 m5 l3">Saya punya bakat</a>
+                      col s12 m5 l3
+                      modal-trigger" href="#daftar-lanjut-boy">Saya punya bakat</a>
           </div>
         </div>
       </section>
@@ -87,12 +89,47 @@
         <div class="container">
           <div class="row">
             <div class="col s12 center" id="quote">
-              <!-- content dari db -->
+              <h4 class='grey-text text-lighten-5'>“Hard work beats talent when talent fails to work hard.”</h4>
+              <h6 class='grey-text text-lighten-5'> - Kevin Durant - </h6>
             </div>
           </div>
         </div>
     </section>
-    <div id="fitur" class="carousel carousel-slider center" data-indicators="true"></div>
+    <div id="fitur" class="carousel carousel-slider center" data-indicators="true">
+      <div class='carousel-item light-blue grey-text text-lighten-5'>
+        <div class='container'>
+          <div class="row">
+            <div class="col s8">
+              <h2>Pertama di Indonesia</h2>
+              <p>Sebagai startup pertama di Indonesia yang bergerak dibidang pengembangan bakat.</p>
+            </div>
+            <div class="col s4">
+              <img src="assets/img/biola-play.png" height="350vh" class="margin-private">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='carousel-item light-blue grey-text text-lighten-5'>
+        <div class='container'>
+          <div class="row">
+            <div class="col s8">
+              <h2>Progress anda terkontrol</h2>
+              <p>Rekam jejak anda akan terdokumentasi dengan baik. Sehingga anda bisa mengetahui dengan jelas perkembangan skill anda</p>
+            </div>
+            <div class="col s4">
+              <img src="assets/img/unnamed.png" height="280vh" class="margin-private">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='carousel-item light-blue grey-text text-lighten-5'>
+        <div class='container'>
+            <h2>Orientasi pengalaman pengguna</h2>
+            <p>Dapatkan pengalaman penggunaan secara optimal dari bakatkita.</p>
+            <img src="assets/img/teamwork.png" height="300vh" class="margin-private">
+        </div>
+      </div>
+    </div>
     <footer class="page-footer deep-orange darken-2">
           <div class="container">
             <div class="row center-align">
@@ -103,7 +140,6 @@
                   <a href="#"><i class="fa fa-twitter-square white-text fa-2x" aria-hidden="true"></i></a>
                   <a href="#"><i class="fa fa-instagram white-text fa-2x" aria-hidden="true"></i></a>
                 </p>
-                <hr/>
                 <p>
                   <a class="grey-text text-lighten-3" href="#!">Bantuan</a> •
                   <a class="grey-text text-lighten-3" href="#!">Umpan balik</a> •
@@ -221,32 +257,8 @@
               </div>
             </div>
             <div class="input-field col s12">
-              <select id="bakat" name="bakat" required="true" aria-required="true">
-                <option value="" disabled selected>Pilihan kamu</option>
-                <optgroup label="Olahraga">
-                  <option value="sepak-bola" data-icon="assets/img/agent.svg" class="circle">Sepak bola</option>
-                  <option value="futsal" data-icon="assets/img/agent.svg" class="circle">Futsal</option>
-                  <option value="volly" data-icon="assets/img/agent.svg" class="circle">Volly</option>
-                  <option value="basket" data-icon="assets/img/agent.svg" class="circle">Basket</option>
-                  <option value="badminton" data-icon="assets/img/agent.svg" class="circle">Badminton</option>
-                  <option value="beladiri" data-icon="assets/img/agent.svg" class="circle">Beladiri</option>
-                  <option value="takraw" data-icon="assets/img/agent.svg" class="circle">Takraw</option>
-                </optgroup>
-                <optgroup label="Musik">
-                  <option value="gitar" data-icon="assets/img/agent.svg" class="circle">Gitar</option>
-                  <option value="piano" data-icon="assets/img/agent.svg" class="circle">Piano</option>
-                  <option value="terompet" data-icon="assets/img/agent.svg" class="circle">Terompet</option>
-                  <option value="gendang"  data-icon="assets/img/agent.svg" class="circle">Gendang</option>
-                  <option value="drum"  data-icon="assets/img/agent.svg" class="circle">Drum</option>
-                  <option value="biola" data-icon="assets/img/agent.svg" class="circle">Biola</option>
-                </optgroup>
-                <optgroup label="Game">
-                  <option value="moba" data-icon="assets/img/agent.svg" class="circle">Moba</option>
-                  <option value="fps" data-icon="assets/img/agent.svg" class="circle">FPS</option>
-                  <option value="arcade" data-icon="assets/img/agent.svg" class="circle">Arcade</option>
-                </optgroup>
-              </select>
-              <label>Pilih bakat</label>
+              <select class="cat-all"><option value="" disabled selected>Pilihan kamu</option></select>
+              <label>Kategori</label>
             </div>
             <div class="row">
               <div class="input-field col s12">
@@ -313,32 +325,8 @@
               </div>
             </div>
             <div class="input-field col s12">
-              <select id="bakat" name="bakat" required="true" aria-required="true">
-                <option value="" disabled selected>Pilihan kamu</option>
-                <optgroup label="Olahraga">
-                  <option value="sepak-bola" data-icon="assets/img/boy.svg" class="circle">Sepak bola</option>
-                  <option value="futsal" data-icon="assets/img/boy.svg" class="circle">Futsal</option>
-                  <option value="volly" data-icon="assets/img/boy.svg" class="circle">Volly</option>
-                  <option value="basket" data-icon="assets/img/boy.svg" class="circle">Basket</option>
-                  <option value="badminton" data-icon="assets/img/boy.svg" class="circle">Badminton</option>
-                  <option value="beladiri" data-icon="assets/img/boy.svg" class="circle">Beladiri</option>
-                  <option value="takraw" data-icon="assets/img/boy.svg" class="circle">Takraw</option>
-                </optgroup>
-                <optgroup label="Musik">
-                  <option value="gitar" data-icon="assets/img/boy.svg" class="circle">Gitar</option>
-                  <option value="piano" data-icon="assets/img/boy.svg" class="circle">Piano</option>
-                  <option value="terompet" data-icon="assets/img/boy.svg" class="circle">Terompet</option>
-                  <option value="gendang"  data-icon="assets/img/boy.svg" class="circle">Gendang</option>
-                  <option value="drum"  data-icon="assets/img/boy.svg" class="circle">Drum</option>
-                  <option value="biola" data-icon="assets/img/boy.svg" class="circle">Biola</option>
-                </optgroup>
-                <optgroup label="Game">
-                  <option value="moba" data-icon="assets/img/boy.svg" class="circle">Moba</option>
-                  <option value="fps" data-icon="assets/img/boy.svg" class="circle">FPS</option>
-                  <option value="arcade" data-icon="assets/img/boy.svg" class="circle">Arcade</option>
-                </optgroup>
-              </select>
-              <label>Pilih bakat</label>
+              <select class="cat-all"><option value="" disabled selected>Pilihan kamu</option></select>
+              <label>Kategori</label>
             </div>
             <div class="row">
               <div class="input-field col s12">
@@ -390,10 +378,13 @@
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/additional-methods.min.js"></script>
+    <script src="js/cookie.js"></script>
     <!-- dragging page -->
     <script src="js/drag.js"></script>
     <!-- private js -->
+    <script src="js/object.js"></script>
     <script src="js/index.js"></script>
     <script src="js/extras-index.js"></script>
+    <script src="js/select-fix.js"></script>
   </body>
 </html>
