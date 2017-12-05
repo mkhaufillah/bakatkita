@@ -1,10 +1,65 @@
 $(document).ready(function(){
   var isMobile = window.screen.width <= 991;
 
+  // get login status
+  if (Cookies.get('usr-id') == null) window.location.replace("/bakatkita");
+
+  // get identity
+  $('.name').text(user[Cookies.get('usr-id')].name);
+  $('.b-date').text(user[Cookies.get('usr-id')].register);
+
+  //check role
+  if (user[Cookies.get('usr-id')].role == 'Pelatih') {
+    $('#pelatih-left-bar').prev().text('Anak didik');
+  } else {
+    $('#pelatih-left-bar').prev().text('Pelatih');
+  }
+
+  if (user[Cookies.get('usr-id')].role == 'Pelatih') {
+    $('.dynamic-h').text($('.dynamic-h').text()+'pebakat');
+  } else {
+    $('.dynamic-h').text($('.dynamic-h').text()+'pelatih');
+  }
+
+  //photo
+  $('.photo-p').attr('src', user[Cookies.get('usr-id')]['img-url']);
+
+  // logout
+  $('.logout').click(function() {
+    Cookies.remove('usr-id');
+    window.location.replace("/bakatkita");
+  });
+
+  //komunitas click
+
+  // komunitas left bar
+  for (i in user[Cookies.get('usr-id')].comunity) {
+    $('#comunity-left-bar').append(
+      "<a id='"+user[Cookies.get('usr-id')].comunity[i]+"' href='../detail-product' class='collection-item overflow-text-set komunitas'>"+comunity[user[Cookies.get('usr-id')].comunity[i]].name+"</a>"
+    );
+  }
+
+  //pelatih leftbar
+  for(i in user[Cookies.get('usr-id')].relation) {
+    $('#pelatih-left-bar').append(
+      "<li>" +
+        "<div class='collapsible-header overflow-text-set'>"+user[user[Cookies.get('usr-id')].relation[i]].talent+"</div>" +
+        "<div class='collapsible-body'>" +
+          "<div class='row'>" +
+            "<img src='"+user[user[Cookies.get('usr-id')].relation[i]]['img-url']+"' class='col s12 circle margin-private-top'>" +
+            "<div class='col s12'>" +
+              "<h6 class='center col s12 margin-private overflow-text-set'>"+user[user[Cookies.get('usr-id')].relation[i]].name+"</h6>" +
+            "</div>" +
+          "</div>" +
+        "</div>" +
+      "</li>"
+    );
+  }
+
   //collapsible
   var ecolaps = $('.collapsible');
   ecolaps.collapsible({
-    accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    accordion : true
   });
 
   //scrolling
@@ -93,9 +148,8 @@ $(document).ready(function(){
   $('tabs').ready(function(){
     $('ul.tabs').tabs();
   });
-    $('tabs').ready(function(){
+  $('tabs').ready(function(){
     $('ul.tabs').tabs('select_tab', 'tab_id');
   });
-  $('select').material_select();
 
 });

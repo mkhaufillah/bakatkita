@@ -2,44 +2,18 @@ $(document).ready(function(){
 
   var isMobile = window.screen.width <= 991;
 
-  // penambahan halaman dummy
-  for (var i = 0; i < 7; i++) {
-    $('#category').append(
-      "<div class='card card-anim'>" +
-        "<div class='card-image waves-effect waves-block waves-light'>" +
-          "<img class='activator' src='assets/img/background1.jpg'>" +
-        "</div>" +
-        "<div class='card-content'>" +
-          "<span class='card-title activator grey-text text-darken-4 center'>Card Title</span>" +
-          "<p class='center'>kategori</p>" +
-        "</div>" +
-        "<div class='card-reveal'>" +
-          "<span class='card-title grey-text text-darken-4 left'>" +
-            "Card Title<i class='material-icons right'>close</i>" +
-          "</span>" +
-          "<p class='justify-text'>" +
-            "Here is some more information about this product that is only revealed once clicked on." +
-          "</p>" +
-        "</div>" +
-      "</div>"
+  // all category
+  for(i in category) {
+    var string = "";
+    for(j in category[i].title) {
+      string = string + "<option value='"+category[i].title[j]+"'>"+category[i].title[j]+"</option>"
+    }
+    $('.cat-all').append(
+      "<optgroup label='"+category[i].category+"'>" +
+      string +
+      "</optgroup>"
     );
   }
-  for (var i = 0; i < 4; i++) {
-    $("#fitur").append(
-      "<div class='carousel-item light-blue grey-text text-lighten-5'>" +
-        "<div class='container'>" +
-          "<h2>First Panel</h2>" +
-          "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>" +
-        "</div>" +
-      "</div>"
-    );
-  }
-  var quote = "“Hard work beats talent when talent fails to work hard.”";
-  var quoteAs = " - Kevin Durant - "
-  $('#quote').append(
-    "<h4 class='grey-text text-lighten-5'>" + quote + "</h4>" +
-    "<h6 class='grey-text text-lighten-5'>" + quoteAs + "</h6>"
-  );
 
   // Initialize collapse button
   $('.button-collapse').sideNav({
@@ -82,24 +56,6 @@ $(document).ready(function(){
     startingTop: '5%',
     endingTop: '10%'
   });
-
-  //validasi
-  $.validator.setDefaults({
-    errorClass: 'invalid',
-    validClass: 'valid',
-    errorPlacement: function (error, element) {
-        $(element)
-            .closest('form')
-            .find("label[for='" + element.attr("id") + "']")
-            .attr('data-error', error.text());
-    },
-    submitHandler: function (form) {
-        console.log(form);
-    }
-  });
-  $('#form-login').validate();
-  $('#form-daftar-agent').validate();
-  $('#form-daftar-boy').validate();
 
   //header anim
   var eas = $('.anim-show');
