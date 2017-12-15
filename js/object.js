@@ -55,8 +55,8 @@ const user = [
     'address': 'Jl. Berdua bersama',
     'birth': '09 Juni 1998',
     'register': '04 Desember 2017',
-    'comunity': ['2'],
-    'relation': ['2', '4'],
+    'comunity': [2],
+    'relation': [2, 4],
     'notif': [
       {
         'type': 'contract',
@@ -103,8 +103,8 @@ const user = [
     'address': 'Jl. Berdua bersama',
     'birth': '09 Juni 1998',
     'register': '04 Desember 2017',
-    'comunity': ['0'],
-    'relation': ['3'],
+    'comunity': [0],
+    'relation': [3, 4],
     'notif': [
       {
         'type': 'contract',
@@ -130,8 +130,9 @@ const user = [
     'address': 'Jl. Berdua bersama',
     'birth': '09 Juni 1998',
     'register': '04 Desember 2017',
-    'comunity': ['2'],
-    'relation': ['0']
+    'comunity': [2],
+    'relation': [0],
+    'notif': []
   },
   {
     'role': 'Pebakat',
@@ -148,8 +149,9 @@ const user = [
     'address': 'Jl. Berdua bersama',
     'birth': '09 Juni 1998',
     'register': '04 Desember 2017',
-    'comunity': ['0'],
-    'relation': ['1']
+    'comunity': [0],
+    'relation': [1],
+    'notif': []
   },
   {
     'role': 'Pebakat',
@@ -166,8 +168,9 @@ const user = [
     'address': 'Jl. Berdua bersama',
     'birth': '09 Juni 1998',
     'register': '04 Desember 2017',
-    'comunity': ['2'],
-    'relation': ['0']
+    'comunity': [2],
+    'relation': [0, 1],
+    'notif': []
   },
 ];
 
@@ -175,48 +178,58 @@ const comunity = [
   {
     'talent': 'Gitar',
     'name': 'Musikalis Pro Guitar',
+    'register': '04 Desember 2017',
     'img-url': '../assets/img/gonedrock.jpg',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
   },
   {
     'talent': 'ESport',
     'name': 'ProGamer Comunity',
+    'register': '04 Desember 2017',
     'img-url': '../assets/img/mushroomiac.jpg',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
   },
   {
     'talent': 'ESport',
     'name': 'AOV Clubing',
+    'register': '04 Desember 2017',
     'img-url': '../assets/img/foxigami.jpg',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
   },
   {
     'talent': 'Gitar',
     'name': 'AyoGuyu Comunity',
+    'register': '04 Desember 2017',
     'img-url': '../assets/img/orcha.jpg',
     'desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
   }
 ];
 
-const progress = [
-  {
-    'data': [
+const progress = {
+  2: [
       {
-        'idPebakat': '2',
-        'data': [6, 7, 7, 8, 9, 5, 6, 6, 3, 5, 6, 7]
+        'idPelatih': '0',
+        'data': [6, 7, 7, 8, 9, 5, 6, 6, 3, 5, 6, 7],
+        'desc': 'Jangan keseringan farming mblo.'
+      }
+    ],
+  3: [
+      {
+        'idPelatih': '1',
+        'data': [6, 5, 6, 3, 4, 5, 6, 6, 5, 7, 8, 9],
+        'desc': 'Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.'
+      }
+    ],
+  4: [
+      {
+        'idPelatih': '0',
+        'data': [4, 5, 7, 4, 6, 3, 3, 4, 5, 6, 8, 6],
+        'desc': 'Gitu gitu aja dari awal. Selalu jadi ATM.'
       },
       {
-        'idPebakat': '4',
-        'data': [6, 5, 6, 3, 4, 5, 6, 6, 5, 7, 8, 9]
+        'idPelatih': '1',
+        'data': [4, 2, 3, 4, 3, 3, 3, 6, 7, 8, 8, 9],
+        'desc': 'Gitu gitu aja dari awal. Nyanyi aja masih cempreng kek kaleng kerupuk.'
       }
     ]
-  },
-  {
-    'data': [
-      {
-        'idPebakat': '3',
-        'data': [4, 5, 7, 4, 6, 3, 3, 4, 5, 6, 8, 6]
-      }
-    ]
-  }
-];
+};

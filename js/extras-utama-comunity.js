@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   for(i in comunity) {
     $('.konten-kom').append(
-      "<div class='col s12 m6 l6'>" +
+      "<div id='"+i+"' class='col s12 m6 l6 showDet-ko'>" +
         "<div class='card sticky-action'>" +
           "<div class='card-image waves-effect waves-block waves-light'>" +
             "<img class='activator' src='"+comunity[i]['img-url']+"'>" +

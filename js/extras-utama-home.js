@@ -3,7 +3,7 @@ $(document).ready(function() {
   for(i in comunity) {
     if (comunity[i].talent == user[Cookies.get('usr-id')].talent) {
       $('.card-app-r-k').append(
-        "<div class='col s12 m6 l6'>" +
+        "<div id='"+i+"' class='col s12 m6 l6 showDet-ko'>" +
           "<div class='card sticky-action'>" +
             "<div class='card-image waves-effect waves-block waves-light'>" +
               "<img class='activator' src='"+comunity[i]['img-url']+"'>" +
@@ -26,7 +26,7 @@ $(document).ready(function() {
     if (user[i].role != user[Cookies.get('usr-id')].role &&
         user[i].talent == user[Cookies.get('usr-id')].talent) {
           $('.card-app-r-p').append(
-            "<div class='col s12 m6 l6'>" +
+            "<div id='"+i+"' class='col s12 m6 l6 showDet-pe'>" +
               "<div class='card sticky-action'>" +
                 "<div class='card-image waves-effect waves-block waves-light'>" +
                   "<img class='activator' src='"+user[i]['img-url']+"'>" +

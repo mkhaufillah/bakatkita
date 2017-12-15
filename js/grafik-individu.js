@@ -6,8 +6,8 @@ $(document).ready(function(){
         labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
         datasets: [
           {
-            label: 'Manuel safir',
-            data: [6, 7, 7, 8, 9, 5, 6, 6, 3, 5, 6, 7],
+            label: user[progress[Cookies.get('usr-id')][Cookies.get('progress-det')].idPelatih].name,
+            data: progress[Cookies.get('usr-id')][Cookies.get('progress-det')].data,
             backgroundColor: 'rgba(3, 169, 244, 0.2)',
             borderColor: 'rgba(3, 169, 244,1)',
             borderWidth: 1

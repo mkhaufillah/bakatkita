@@ -30,8 +30,6 @@ $(document).ready(function(){
     window.location.replace("/bakatkita");
   });
 
-  //komunitas click
-
   // komunitas left bar
   for (i in user[Cookies.get('usr-id')].comunity) {
     $('#comunity-left-bar').append(
@@ -82,8 +80,7 @@ $(document).ready(function(){
   var es = $('#search');
   var ec = $('#cari');
   var eln = $('.list-nav');
-  var esel = $('#cat-all');
-  esel.css('display', 'none');
+  var esel = $('.cat-bar');
   es.click(function() {
     if (!conSearch) {
       es.parent().attr('class', 'list-nav active');
@@ -105,6 +102,20 @@ $(document).ready(function(){
     }
   });
 
+  // category
+  for(i in category) {
+    var string = "";
+    for(j in category[i].title) {
+      string = string + "<li class='collection-item'><p>" + category[i].title[j] + "</p></li>";
+    }
+    $('#category-bar').append(
+      "<li class='collection-item'>" +
+        "<small class='blue-text'>" + category[i].category + "</small>" +
+      "</li>" +
+      string
+    );
+  }
+
   //search mobile
   var ecm = $('#cari-mobile');
   var ens = $('.nav-search');
@@ -124,7 +135,8 @@ $(document).ready(function(){
   //notification
   var notifIsFocus = false;
   var en = $("#notifikasi");
-  en.dropdown({
+  var edb = $(".dropdown-button");
+  edb.dropdown({
     belowOrigin: true,
     stopPropagation: true
   });
@@ -147,6 +159,36 @@ $(document).ready(function(){
     en.parent().css('width', 'auto');
     notifIsFocus = false;
   });
+
+  var newNotif = 0;
+  for (i in user[Cookies.get('usr-id')].notif) {
+    var string = "";
+    var read = "Sudah dibaca";
+    if (!user[Cookies.get('usr-id')].notif[i].read) {
+      read = "Belum dibaca";
+      newNotif++;
+    }
+    if (i == user[Cookies.get('usr-id')].notif.length-1) {
+      string = "<li><center><p>Tampilkan semua</p></center></li>";
+      $('.newNotif').html(newNotif);
+    }
+    $('#notifikasi-bar').append(
+      "<li class='collection-item avatar'>"+
+        "<img src='../assets/img/man.png' alt='' class='circle'>"+
+        "<p><b>"+user[Cookies.get('usr-id')].notif[i].title+"</b> <br>"+
+           user[Cookies.get('usr-id')].notif[i].desc+" <br>"+
+           read+
+        "</p>"+
+      "</li>"+
+      string
+    );
+  }
+
+  if (user[Cookies.get('usr-id')].notif.length == 0) {
+    $('#notifikasi-bar').append(
+      "<li><center><p>Tidak ada notifikasi</p></center></li>"
+    );
+  }
 
   // tabs
   $('tabs').ready(function(){
